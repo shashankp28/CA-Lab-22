@@ -1,8 +1,10 @@
-public class Main {
+import java.util.Arrays;
+
+public class Driver {
     
     static boolean can_move_forward(boolean[][] playground)
     {
-        return !(playground[0][0] && playground[0][1] && playground[0][2]) && !(playground[1][1])
+        return !(playground[0][0] && playground[0][1] && playground[0][2]) && !(playground[1][1]);
     }
 
     public static void main(String args[])
@@ -12,17 +14,17 @@ public class Main {
         int time = 0;
 
         Intruder intruder = new Intruder(w);
-        Playground playground = new Playground(p);
+        Playground playground = new Playground(p, w);
 
         while(!intruder.goal_test())
         {
-            boolean[][] current_sensor_config = playground.get_env(intruder.poisition);
-            if can_move_forward(current_sensor_config)
+            boolean[][] current_sensor_config = playground.get_env(intruder.position);
+            if(can_move_forward(current_sensor_config))
             {
                 intruder.move_forward();
             }
-            time += 10
+            time += 10;
         }
-        return time
+        System.out.println(time);
     }
 }

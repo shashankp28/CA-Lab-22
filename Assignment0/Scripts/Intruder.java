@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Intruder
 {
-    int w = 0;
+    static int w = 0;
 
 // Constructor
     public Intruder(int w) 
@@ -10,19 +10,18 @@ public class Intruder
         this.w = w;
     }
 
-    static int position = 0;
+    static int position = -1;
 
 // Move forward
     void move_forward()
     {
         position = position + 1;
-        System.out.println(position);
     }
 
 // Goal Test Function
-    boolean goal_test(int w)
+    boolean goal_test()
     {
-        if (position > w)
+        if (position == w)
         {
             return true;
         }

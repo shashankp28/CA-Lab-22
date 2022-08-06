@@ -10,11 +10,11 @@ public class Playground
   {false, false, false},
   {false, false, false}};
 
-    static int p = 0;
+    static double p = 0;
     static int w = 0;
 
 // Constructor
-    public Playground(int p, int w) 
+    public Playground(double p, int w) 
     {
         this.p = p;
         this.w = w;
@@ -36,6 +36,10 @@ public class Playground
             grid[0][0] = false;
             grid[0][1] = false;
             grid[0][2] = false;
+        }
+        if (position == -1)
+        {
+            grid[1][1] = false;
         }
 
         return grid;
