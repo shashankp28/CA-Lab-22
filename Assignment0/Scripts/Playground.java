@@ -5,22 +5,29 @@ public class Playground
 
 {
 
-  static bool[][] grid =  {{false, false, false},
+// Global variables declaration
+  static boolean[][] grid =  {{false, false, false},
   {false, false, false},
   {false, false, false}};
 
+    static int p = 0;
+    static int w = 0;
+
+// Constructor
     public Playground(int p, int w) 
     {
         this.p = p;
+        this.w = w;
     }
 
-    void get_env(int position)
+// Method to get the configuration of sensors around intruder
+    static boolean[][] get_env(int position)
     {
         for(int i = 0; i<3; i++)
         {
             for(int j = 0; j<3; j++)
             {
-                grid[i][j] = Math.Random() < p;
+                grid[i][j] = Math.random() < p;
             }
         }
 
@@ -30,10 +37,14 @@ public class Playground
             grid[0][1] = false;
             grid[0][2] = false;
         }
+
+        return grid;
     }
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
 
-       get_env();
+// Test Code
+    //    boolean[][] ans = get_env(5);
+    //    System.out.println(ans[0][0]);
     }
 }
