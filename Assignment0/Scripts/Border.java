@@ -1,14 +1,11 @@
 import java.util.Scanner;
-import java.util.Random;
 
 public class Border
 
 {
 
 // Global variables declaration
-  static boolean[][] grid =  {{false, false, false},
-  {false, false, false},
-  {false, false, false}};
+    static Sensor[][] sensors =  new Sensor[3][3];
 
     static double p = 0;
     static int w = 0;
@@ -21,28 +18,28 @@ public class Border
     }
 
 // Method to get the configuration of sensors around intruder
-    static boolean[][] get_env(int position)
+    static Sensor[][] get_env(int position)
     {
         for(int i = 0; i<3; i++)
         {
             for(int j = 0; j<3; j++)
             {
-                grid[i][j] = Math.random() < p;  // Coin Toss
+                sensors[i][j] = new Sensor(p);  // Coin Toss
             }
         }
 
         if (position == w - 1)
         {
-            grid[0][0] = false;
-            grid[0][1] = false;
-            grid[0][2] = false;
+            sensors[0][0].state = false;
+            sensors[0][1].state = false;
+            sensors[0][2].state = false;
         }
         if (position == -1)
         {
-            grid[1][1] = false;
+            sensors[1][1].state = false;
         }
 
-        return grid;
+        return sensors;
     }
 
     public static void main(String[] args) {

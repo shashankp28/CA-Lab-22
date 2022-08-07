@@ -3,9 +3,9 @@ import java.util.Arrays;
 public class Main {
     
     // Check whether the intruder can move forward
-    static boolean can_move_forward(boolean[][] border)
+    static boolean can_move_forward(Sensor[][] border)
     {
-        return !(border[0][0] && border[0][1] && border[0][2]) && !(border[1][1]);
+        return !(border[0][0].state && border[0][1].state && border[0][2].state) && !(border[1][1].state);
     }
 
     public static void main(String args[])
@@ -21,7 +21,7 @@ public class Main {
         // Interate until the intruder reaches the defending country
         while(!intruder.goal_test())
         {
-            boolean[][] current_sensor_config = border.get_env(intruder.position);
+            Sensor[][] current_sensor_config = border.get_env(intruder.position);
             if(can_move_forward(current_sensor_config))
             {
                 intruder.move_forward();
