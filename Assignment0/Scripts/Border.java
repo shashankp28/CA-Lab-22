@@ -15,6 +15,13 @@ public class Border
     {
         this.p = p;
         this.w = w;
+        for(int i = 0; i<3; i++)
+        {
+            for(int j = 0; j<3; j++)
+            {
+                sensors[i][j] = new Sensor(p);  // Coin Toss
+            }
+        }
     }
 
 // Method to get the configuration of sensors around intruder
@@ -24,7 +31,7 @@ public class Border
         {
             for(int j = 0; j<3; j++)
             {
-                sensors[i][j] = new Sensor(p);  // Coin Toss
+                sensors[i][j].set_random_state(p);  // Coin Toss
             }
         }
 
