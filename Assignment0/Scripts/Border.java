@@ -19,7 +19,7 @@ public class Border
         {
             for(int j = 0; j<3; j++)
             {
-                sensors[i][j] = new Sensor(p);  // Coin Toss
+                sensors[i][j] = new Sensor(p);
             }
         }
     }
