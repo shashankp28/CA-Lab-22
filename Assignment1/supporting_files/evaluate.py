@@ -1,5 +1,3 @@
-#!/bin/python
-
 import os
 import shutil
 import sys
@@ -7,7 +5,6 @@ import subprocess
 from threading import Timer
 
 def evaluate(submitted_program):
-
 	jarfile = "./emulator.jar"
 	testcases_directory = "./test_cases/"
 
@@ -33,7 +30,6 @@ def evaluate(submitted_program):
 				if "Main Memory Contents" in line:
 					memory_required = True
 			expected_file.close()
-
 			if starting_address == "x":
 				starting_address = "0"
 				ending_address = "0"

@@ -2,7 +2,12 @@
 a:
 	10
 	.text
-// your code here to check if the number 'a' is even or odd. If yes, write 1 to x10. Else write -1.
-// you may change the value of 'a'
-// remove these comments!
-
+main:
+	load %x0 $a %x3
+	divi %x3 2 %x4
+	beq %x31 0 even
+	subi %x0 1 %x10
+	end
+even:
+	addi %x0 1 %x10
+	end
