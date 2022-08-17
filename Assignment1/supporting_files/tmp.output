@@ -1,0 +1,58 @@
+Symbol Table :
+[{a=0, even=7, main=1}]
+
+Parsed instructions :
+[[PC=1	load	[Register:0]	[Label:a]	[Register:3]
+, PC=2	divi	[Register:3]	[Immediate:2]	[Register:4]
+, PC=3	addi	[Register:0]	[Immediate:0]	[Register:5]
+, PC=4	beq	[Register:31]	[Register:5]	[Label:even]
+, PC=5	addi	[Register:0]	[Immediate:1]	[Register:10]
+, PC=6	end	null	null	null
+, PC=7	subi	[Register:0]	[Immediate:1]	[Register:10]
+, PC=8	end	null	null	null
+]]
+
+Register File Contents:
+
+PC	: 8
+
+x0	: 0
+x1	: 0
+x2	: 0
+x3	: 0
+x4	: 0
+x5	: 0
+x6	: 0
+x7	: 0
+x8	: 0
+x9	: 0
+x10	: -1
+x11	: 0
+x12	: 0
+x13	: 0
+x14	: 0
+x15	: 0
+x16	: 0
+x17	: 0
+x18	: 0
+x19	: 0
+x20	: 0
+x21	: 0
+x22	: 0
+x23	: 0
+x24	: 0
+x25	: 0
+x26	: 0
+x27	: 0
+x28	: 0
+x29	: 0
+x30	: 0
+x31	: 0
+
+
+
+Main Memory Contents:
+
+0		: 0
+
+
