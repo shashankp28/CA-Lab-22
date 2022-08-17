@@ -1,32 +1,48 @@
 Symbol Table :
-[{a=0, even=7, main=1}]
+[{exit=24, loop=15, main=1, n=0}]
 
 Parsed instructions :
-[[PC=1	load	[Register:0]	[Label:a]	[Register:3]
-, PC=2	divi	[Register:3]	[Immediate:2]	[Register:4]
-, PC=3	addi	[Register:0]	[Immediate:0]	[Register:5]
-, PC=4	beq	[Register:31]	[Register:5]	[Label:even]
-, PC=5	addi	[Register:0]	[Immediate:1]	[Register:10]
-, PC=6	end	null	null	null
-, PC=7	subi	[Register:0]	[Immediate:1]	[Register:10]
-, PC=8	end	null	null	null
+[[PC=1	load	[Register:0]	[Label:n]	[Register:3]
+, PC=2	addi	[Register:0]	[Immediate:0]	[Register:7]
+, PC=3	addi	[Register:0]	[Immediate:65535]	[Register:4]
+, PC=4	addi	[Register:0]	[Immediate:0]	[Register:5]
+, PC=5	store	[Register:5]	[Immediate:0]	[Register:4]
+, PC=6	addi	[Register:7]	[Immediate:1]	[Register:7]
+, PC=7	beq	[Register:3]	[Register:7]	[Label:exit]
+, PC=8	subi	[Register:4]	[Immediate:1]	[Register:4]
+, PC=9	addi	[Register:0]	[Immediate:1]	[Register:6]
+, PC=10	store	[Register:6]	[Immediate:0]	[Register:4]
+, PC=11	addi	[Register:7]	[Immediate:1]	[Register:7]
+, PC=12	subi	[Register:4]	[Immediate:1]	[Register:4]
+, PC=13	beq	[Register:3]	[Register:7]	[Label:exit]
+, PC=14	jmp	null	null	[Label:loop]
+, PC=15	add	[Register:5]	[Register:6]	[Register:5]
+, PC=16	store	[Register:5]	[Immediate:0]	[Register:4]
+, PC=17	add	[Register:5]	[Register:6]	[Register:5]
+, PC=18	sub	[Register:5]	[Register:6]	[Register:6]
+, PC=19	sub	[Register:5]	[Register:6]	[Register:5]
+, PC=20	addi	[Register:7]	[Immediate:1]	[Register:7]
+, PC=21	subi	[Register:4]	[Immediate:1]	[Register:4]
+, PC=22	beq	[Register:7]	[Register:3]	[Label:exit]
+, PC=23	jmp	null	null	[Label:loop]
+, PC=24	end	null	null	null
 ]]
 
 Register File Contents:
 
-PC	: 8
+PC	: 24
 
 x0	: 0
 x1	: 0
 x2	: 0
-x3	: 0
-x4	: 0
+x3	: 2
+x4	: 65533
 x5	: 0
-x6	: 0
-x7	: 0
+x6	: 1
+x7	: 2
 x8	: 0
 x9	: 0
-x10	: -1
+x10	: 0
 x11	: 0
 x12	: 0
 x13	: 0
@@ -53,6 +69,7 @@ x31	: 0
 
 Main Memory Contents:
 
-0		: 0
+65534		: 1
+65535		: 0
 
 
