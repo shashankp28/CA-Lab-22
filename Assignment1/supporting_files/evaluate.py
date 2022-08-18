@@ -103,7 +103,7 @@ def evaluate(submitted_program):
 					print(line)
 				output_file.close()
 
-			# os.remove("./tmp.asm")
-			# os.remove("./tmp.output")
+			os.remove("./tmp.asm")
+			os.remove("./tmp.output")
 
 	return [total_marks, scored_marks]
