@@ -1,43 +1,37 @@
 Symbol Table :
-[{a=0, palindrome=16, notpalindrome=19, loop=8, main=1, terminate=13, return=22}]
+[{prime=13, a=0, nprime=15, iter=8, main=1}]
 
 Parsed instructions :
-[[PC=1	load	[Register:0]	[Label:a]	[Register:1]
-, PC=2	add	[Register:0]	[Register:1]	[Register:2]
-, PC=3	addi	[Register:0]	[Immediate:0]	[Register:3]
-, PC=4	addi	[Register:0]	[Immediate:10]	[Register:4]
-, PC=5	blt	[Register:2]	[Register:3]	[Label:not_palindrome]
-, PC=6	blt	[Register:2]	[Register:4]	[Label:palindrome]
-, PC=7	jmp	null	null	[Label:loop]
-, PC=8	div	[Register:2]	[Register:4]	[Register:2]
-, PC=9	beq	[Register:2]	[Register:0]	[Label:terminate]
-, PC=10	add	[Register:31]	[Register:3]	[Register:3]
-, PC=11	mul	[Register:3]	[Register:4]	[Register:3]
-, PC=12	jmp	null	null	[Label:loop]
-, PC=13	add	[Register:31]	[Register:3]	[Register:3]
-, PC=14	beq	[Register:3]	[Register:1]	[Label:palindrome]
-, PC=15	bne	[Register:3]	[Register:1]	[Label:notpalindrome]
-, PC=16	addi	[Register:0]	[Immediate:0]	[Register:10]
-, PC=17	addi	[Register:10]	[Immediate:1]	[Register:10]
-, PC=18	jmp	null	null	[Label:return]
-, PC=19	addi	[Register:0]	[Immediate:0]	[Register:10]
-, PC=20	subi	[Register:10]	[Label:-1]	[Register:10]
-, PC=21	jmp	null	null	[Label:return]
-, PC=22	end	null	null	null
+[[PC=1	load	[Register:0]	[Label:a]	[Register:3]
+, PC=2	addi	[Register:0]	[Immediate:1]	[Register:6]
+, PC=3	addi	[Register:0]	[Immediate:2]	[Register:7]
+, PC=4	beq	[Register:3]	[Register:6]	[Label:nprime]
+, PC=5	beq	[Register:3]	[Register:7]	[Label:prime]
+, PC=6	addi	[Register:0]	[Immediate:2]	[Register:4]
+, PC=7	jmp	null	null	[Label:iter]
+, PC=8	div	[Register:3]	[Register:4]	[Register:5]
+, PC=9	beq	[Register:31]	[Register:0]	[Label:nprime]
+, PC=10	addi	[Register:4]	[Immediate:1]	[Register:4]
+, PC=11	blt	[Register:4]	[Register:3]	[Label:iter]
+, PC=12	beq	[Register:4]	[Register:3]	[Label:prime]
+, PC=13	addi	[Register:0]	[Immediate:1]	[Register:10]
+, PC=14	end	null	null	null
+, PC=15	subi	[Register:0]	[Immediate:1]	[Register:10]
+, PC=16	end	null	null	null
 ]]
 
 Register File Contents:
 
-PC	: 22
+PC	: 14
 
 x0	: 0
-x1	: 12321
+x1	: 0
 x2	: 0
-x3	: 12321
-x4	: 10
-x5	: 0
-x6	: 0
-x7	: 0
+x3	: 15485863
+x4	: 15485863
+x5	: 1
+x6	: 1
+x7	: 2
 x8	: 0
 x9	: 0
 x10	: 1
@@ -67,6 +61,6 @@ x31	: 1
 
 Main Memory Contents:
 
-0		: 12321
+0		: 15485863
 
 
