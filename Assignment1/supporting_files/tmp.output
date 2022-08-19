@@ -1,0 +1,7 @@
+Exception in thread "main" java.lang.IllegalArgumentException: No enum constant generic.Instruction.OperationType.not_palindrome:
+	at java.base/java.lang.Enum.valueOf(Enum.java:273)
+	at generic.Instruction$OperationType.valueOf(Instruction.java:1)
+	at generic.ParsedProgram.getInstructionFromString(ParsedProgram.java:127)
+	at generic.ParsedProgram.parseCodeSection(ParsedProgram.java:113)
+	at generic.Simulator.setupSimulation(Simulator.java:17)
+	at main.Main.main(Main.java:20)
