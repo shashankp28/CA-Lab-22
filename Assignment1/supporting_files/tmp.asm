@@ -19,12 +19,12 @@ loop:
 terminate:
 	add %x31, %x3, %x3
 	beq %x3, %x1, palindrome
-    bne %x3, %x1, not_palindrome
+    bne %x3, %x1, notpalindrome
 palindrome:
 	addi %x0, 0, %x10
 	addi %x10, 1, %x10
 	jmp return
-not_palindrome:
+notpalindrome:
 	addi %x0, 0, %x10
 	subi %x10, -1, %x10
 	jmp return

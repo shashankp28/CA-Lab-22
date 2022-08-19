@@ -31,9 +31,9 @@ swap:
 	jmp increment
 increment:
 	addi %x5, 1, %x5
-	beq %x2, %x5, next_iteration
+	beq %x2, %x5, nextiteration
 	jmp loop
-next_iteration:
+nextiteration:
 	addi %x4, 1, %x4
 	addi %x4, 0, %x5
 	jmp loop
