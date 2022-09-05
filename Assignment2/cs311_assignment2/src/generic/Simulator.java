@@ -25,7 +25,7 @@ public class Simulator {
 		fos.write("How are you doing?".getBytes());
 		fos.close();
 		//2. write the firstCodeAddress to the  file
-
+		
 		//3. write the data to the file
 		//4. assemble one instruction at a time, and write to the file
 		//5. close the file
