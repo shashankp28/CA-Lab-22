@@ -19,12 +19,13 @@ public class Simulator {
 	
 	public static String toBinary(int x, int len)
     {
-        if (len > 0)
-        {
-            return String.format("%" + len + "s",
-                            Integer.toBinaryString(x)).replaceAll(" ", "0");
-        }
-        return null;
+		String bin = String.format("%" + len + "s",
+							Integer.toBinaryString(x)).replaceAll(" ", "0");
+		if(x<0)
+		{
+			bin = bin.substring(32-len, 32);
+		}
+		return bin;
     }
 
 	public static void assemble(String objectProgramFile)
@@ -55,27 +56,60 @@ public class Simulator {
 				String bits = "";
 				String op_name = instruction.operationType.name();
 				int operation_number = OperationType.valueOf(op_name).ordinal();
-				String operation_bin = Simulator.toBinary(operation_number, 5);
+				String operation_bin = toBinary(operation_number, 5);
 				bits += operation_bin;
 				
-				if(operation_number<=21 and operation_number%2==0)
+				if(operation_number<=21 && operation_number%2==0)
 				{
-					String rs1 = Simulator.toBinary(instruction.sourceOperand1.value, 5);
-					String rs2 = Simulator.toBinary(instruction.sourceOperand2.value, 5);
-					String rd = Simulator.toBinary(instruction.destinationOperand.value, 5);
+					String rs1 = toBinary(instruction.sourceOperand1.value, 5);
+					String rs2 = toBinary(instruction.sourceOperand2.value, 5);
+					String rd = toBinary(instruction.destinationOperand.value, 5);
 					bits += rs1 + rs2 + rd;
 					String zero = "0";
 					bits += zero.repeat(12);
 				}
 
-				else if((operation_number<=21 and operation_number%2!=0) or )
+				else if((operation_number<=23 && operation_number%2!=0) || op_name=="load")
 				{
-					String rs1 = Simulator.toBinary(instruction.sourceOperand1.value, 5);
-					String imm = Simulator.toBinary(instruction.sourceOperand2.value, 5);
-					String rd = Simulator.toBinary(instruction.destinationOperand.value, 17);
+					String rs1 = toBinary(instruction.sourceOperand1.value, 5);
+					String imm = toBinary(instruction.sourceOperand2.value, 17);
+					String rd = toBinary(instruction.destinationOperand.value, 5);
+					bits += rs1 + rd + imm;
+				}
+				
+				else if(op_name=="jmp")
+				{
+					String rd, imm;
+					if (instruction.destinationOperand.operandType.name()=="Register")
+					{
+						rd = toBinary(instruction.destinationOperand.value, 5);
+						imm = toBinary(0, 22);
+					}
+					else
+					{
+						String label = instruction.destinationOperand.labelValue;
+						int offset = ParsedProgram.symtab.get(label) - instruction.programCounter;
+						rd = toBinary(0, 5);
+						imm = toBinary(offset, 22);
+					}
+					bits += rd + imm;
+				}
+
+				else if(operation_number>=25 && operation_number<=28)
+				{
+					String label = instruction.destinationOperand.labelValue;
+					int offset = ParsedProgram.symtab.get(label) - instruction.programCounter;
+					String rs1 = toBinary(instruction.sourceOperand1.value, 5);
+					String rd = toBinary(instruction.sourceOperand2.value, 5);
+					String imm = toBinary(offset, 17);
 					bits += rs1 + rd + imm;
 				}
 
+				else
+				{
+					String zero = "0";
+					bits += zero.repeat(27);
+				}
 
 				int signed_int = (int) Long.parseLong(bits,2);
 				byte[] read = ByteBuffer.allocate(4).putInt(signed_int).array();
