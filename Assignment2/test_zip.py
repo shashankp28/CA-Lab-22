@@ -24,11 +24,11 @@ zip_ref.close()
 shutil.copyfile("build.xml", submissions_temp_dir + "/build.xml")
 
 os.chdir(submissions_temp_dir)
-
+# print(os.listdir(os.getcwd()))
 stdout_file = open("./tmp.output", 'a')
 popen_args = ["ant", "make-jar"]
-proc = subprocess.Popen(popen_args, stdout = stdout_file, stderr = stdout_file)
-timer = Timer(5, proc.kill)
+proc = subprocess.Popen(popen_args, stdout = stdout_file, shell=True)
+timer = Timer(10, proc.kill)
 try:
 	timer.start()
 	stdout, stderr = proc.communicate()
