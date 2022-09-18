@@ -2,6 +2,8 @@ package processor.pipeline;
 
 import generic.Instruction;
 import generic.Simulator;
+import generic.Instruction.OperationType;
+import generic.Operand;
 import processor.Processor;
 
 public class RegisterWrite {
@@ -24,7 +26,7 @@ public class RegisterWrite {
 			
 			// if instruction being processed is an end instruction, remember to call Simulator.setSimulationComplete(true);
 			Instruction inst = MA_RW_Latch.getInstruction();
-			String op_name = inst.OperationType.name();
+			String op_name = inst.getOperationType().name();
 			int operation_number = OperationType.valueOf(op_name).ordinal();
 
 			if(operation_number<=21)

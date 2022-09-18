@@ -2,7 +2,7 @@ package generic;
 
 public class Operand {
 	
-	public enum OperandType {Register, Immediate, Label};
+	public static enum OperandType {Register, Immediate, Label};
 	
 	OperandType operandType;
 	int value;
