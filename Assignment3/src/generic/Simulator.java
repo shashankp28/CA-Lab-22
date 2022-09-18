@@ -57,7 +57,7 @@ public class Simulator {
 		try {
 			avai = d.available();
 		  }
-		  catch(IOException e) {
+		  catch(Exception e) {
 			e.printStackTrace();
 		  }
 		
@@ -67,7 +67,7 @@ public class Simulator {
 			try {
 				next = d.readInt();
 			  }
-			  catch(IOException e) {
+			  catch(Exception e) {
 				e.printStackTrace();
 			  }
 
