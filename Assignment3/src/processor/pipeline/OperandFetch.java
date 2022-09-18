@@ -1,8 +1,12 @@
 package processor.pipeline;
 
 import processor.Processor;
+
+import java.util.Arrays;
+
 import generic.Instruction;
 import generic.Operand;
+import generic.Operand.OperandType;
 
 public class OperandFetch {
 	Processor containingProcessor;
@@ -53,44 +57,44 @@ public class OperandFetch {
 
 			if(opcode_number%2==0 && opcode_number<=20)
 			{
-				rs1.setOperandType(rs1.OperandType.valueOf("Register"));
+				rs1.setOperandType(OperandType.Register);
 				String rs1_bin = binary_instruction.substring(5, 10);
 				rs1.setValue(Integer.parseInt(rs1_bin,2));
 
-				rs2.setOperandType(rs2.OperandType.valueOf("Register"));
+				rs2.setOperandType(OperandType.Register);
 				String rs2_bin = binary_instruction.substring(10, 15);
 				rs2.setValue(Integer.parseInt(rs2_bin,2));
 
-				rd.setOperandType(rd.OperandType.valueOf("Register"));
+				rd.setOperandType(OperandType.Register);
 				String rd_bin = binary_instruction.substring(15, 20);
 				rd.setValue(Integer.parseInt(rd_bin,2));
 			}
 
 			if((opcode_number%2!=0 && opcode_number<=23) || (opcode_number==22))
 			{
-				rs1.setOperandType(rs1.OperandType.valueOf("Register"));
+				rs1.setOperandType(OperandType.Register);
 				String rs1_bin = binary_instruction.substring(5, 10);
 				rs1.setValue(Integer.parseInt(rs1_bin,2));
 
-				rs2.setOperandType(rs2.OperandType.valueOf("Immediate"));
+				rs2.setOperandType(OperandType.Immediate);
 				String rs2_bin = binary_instruction.substring(15);
 				rs2.setValue(toSignedInteger(rs2_bin));
 
-				rd.setOperandType(rd.OperandType.valueOf("Register"));
+				rd.setOperandType(OperandType.Register);
 				String rd_bin = binary_instruction.substring(10, 15);
 				rd.setValue(Integer.parseInt(rd_bin,2));
 			}
 
 			if(opcode_number<=28 && opcode_number>=25)
 			{
-				rs1.setOperandType(rs1.OperandType.valueOf("Register"));
+				rs1.setOperandType(OperandType.Register);
 				String rs1_bin = binary_instruction.substring(5, 10);
 				rs1.setValue(Integer.parseInt(rs1_bin,2));
-				rs2.setOperandType(rs2.OperandType.valueOf("Register"));
+				rs2.setOperandType(OperandType.Register);
 				String rs2_bin = binary_instruction.substring(10, 15);
 				rs2.setValue(Integer.parseInt(rs2_bin,2));
 
-				rd.setOperandType(rd.OperandType.valueOf("Immediate"));
+				rd.setOperandType(OperandType.Immediate);
 				String rd_bin = binary_instruction.substring(15);
 				rd.setValue(toSignedInteger(rd_bin));
 			}
@@ -105,12 +109,12 @@ public class OperandFetch {
 
 				if(imm_val==0)
 				{
-					rd.setOperandType(rd.OperandType.valueOf("Register"));
+					rd.setOperandType(OperandType.Register);
 					rd.setValue(Integer.parseInt(rd_bin,2));
 				}
 				else
 				{
-					rd.setOperandType(rd.OperandType.valueOf("Immediate"));
+					rd.setOperandType(OperandType.Immediate);
 					rd.setValue(toSignedInteger(imm_bin));
 				}
 			}

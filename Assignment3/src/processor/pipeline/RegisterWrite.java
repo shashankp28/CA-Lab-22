@@ -41,7 +41,7 @@ public class RegisterWrite {
 			
 			if(operation_number==29)
 			{
-				Simulator.setupSimulationComplete(true);
+				Simulator.setSimulationComplete(true);
 			}
 
 			MA_RW_Latch.setRW_enable(false);
