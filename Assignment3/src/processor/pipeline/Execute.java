@@ -159,7 +159,7 @@ public class Execute {
 			else if(opcode < 23) {
 
 				int imm = inst.getSourceOperand1().getValue();
-				int operand_1 = containingProcessor.getRegisterFile().getValue(i);
+				int operand_1 = containingProcessor.getRegisterFile().getValue(imm);
 				int operand_2 = inst.getSourceOperand2().getValue();
 
 				switch(ot) {
