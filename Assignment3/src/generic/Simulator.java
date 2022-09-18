@@ -2,11 +2,12 @@ package generic;
 
 import java.io.DataInputStream;
 import java.io.FileInputStream;
-import java.io.InputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+
 import processor.Clock;
 import processor.Processor;
-import java.io.IOException;
 import generic.Statistics;
 
 public class Simulator {
@@ -14,18 +15,21 @@ public class Simulator {
 	static Processor processor;
 	static boolean simulationComplete;
 	
-	public static void setupSimulation(String assemblyProgramFile, Processor p)
-	{
+	public static void setupSimulation(String assemblyProgramFile, Processor p) {
+
 		Simulator.processor = p;
+		try {
+
 			loadProgram(assemblyProgramFile);
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
 		
 		simulationComplete = false;
-
-
 	}
 	
-	static void loadProgram(String assemblyProgramFile)
-	{
+	static void loadProgram(String assemblyProgramFile) throws IOException {
 		/*
 		 * TODO
 		 * 1. load the program into memory according to the program layout described
@@ -36,67 +40,45 @@ public class Simulator {
 		 *     x1 = 65535
 		 *     x2 = 65535
 		 */
-
-		InputStream input = null;
+		InputStream is = null;
 		try {
 
-			input = new FileInputStream(assemblyProgramFile);
+			is = new FileInputStream(assemblyProgramFile);
 		}
 		catch (FileNotFoundException e) {
 
 			e.printStackTrace();
 		}
+		DataInputStream dis = new DataInputStream(is);
 
-		DataInputStream d = new DataInputStream(input);
-		
+		int address = -1;
+		int add_offset = 1;
+		while(dis.available() > 0) {
 
-		int address = 0;
-		boolean isPCset = false;
-		int avai = 0;
-
-		try {
-			avai = d.available();
-		  }
-		  catch(IOException e) {
-			e.printStackTrace();
-		  }
-		
-		while(avai > 0) {
-			int next = 0;
-
-			try {
-				next = d.readInt();
-			  }
-			  catch(IOException e) {
-				e.printStackTrace();
-			  }
-
-
-			if(!isPCset)
-			{
-				processor.getRegisterFile().setProgramCounter(next);
-				isPCset = true;
+			int next = dis.readInt();
+			switch(address) {
+				case -1:
+					processor.getRegisterFile().setProgramCounter(next);
+					break;
+				default:
+					processor.getMainMemory().setWord(address, next);
+					break;
 			}
-			
-			else
-			{
-				processor.getMainMemory().setWord(address, next);
-				address+=1;
-			}
+
+			address += add_offset;
 		}
-
+		
 		int CONST = 65535;
-
-		processor.getRegisterFile().setValue(0, 0);
-		processor.getRegisterFile().setValue(1, CONST);
-		processor.getRegisterFile().setValue(2, CONST);
-
+		
+        processor.getRegisterFile().setValue(0, 0);
+        processor.getRegisterFile().setValue(1, CONST);
+        processor.getRegisterFile().setValue(2, CONST);
 	}
-	
-	public static void simulate()
-	{
-		while(simulationComplete == false)
-		{
+
+	public static void simulate() {
+
+		while(simulationComplete == false) {
+
 			processor.getIFUnit().performIF();
 			Clock.incrementClock();
 			processor.getOFUnit().performOF();
@@ -108,18 +90,13 @@ public class Simulator {
 			processor.getRWUnit().performRW();
 			Clock.incrementClock();
 
-			// Set Statistics
 			Statistics.setNumberOfInstructions(Statistics.getNumberOfInstructions() + 1);
 			Statistics.setNumberOfCycles(Statistics.getNumberOfCycles() + 1);
-
 		}
-		
-		// TODO
-		// set statistics
 	}
 	
-	public static void setSimulationComplete(boolean value)
-	{
+	public static void setSimulationComplete(boolean value) {
+
 		simulationComplete = value;
 	}
 }
