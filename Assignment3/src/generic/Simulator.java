@@ -3,7 +3,7 @@ package generic;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.InputStream;
-import java.io.FileNotFoundException;;
+import java.io.FileNotFoundException;
 import processor.Clock;
 import processor.Processor;
 import generic.Statistics;

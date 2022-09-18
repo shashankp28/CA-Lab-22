@@ -55,22 +55,22 @@ public class OperandFetch {
 			{
 				rs1.setOperandType(rs1.OperandType.valueOf("Register"));
 				String rs1_bin = binary_instruction.substring(5, 10);
-				rs1.setValue(containingProcessor.getRegisterFile().getValue(Integer.parseInt(rs1_bin,2)));
+				rs1.setValue(Integer.parseInt(rs1_bin,2));
 
 				rs2.setOperandType(rs2.OperandType.valueOf("Register"));
 				String rs2_bin = binary_instruction.substring(10, 15);
-				rs2.setValue(containingProcessor.getRegisterFile().getValue(Integer.parseInt(rs2_bin,2)));
+				rs2.setValue(Integer.parseInt(rs2_bin,2));
 
 				rd.setOperandType(rd.OperandType.valueOf("Register"));
 				String rd_bin = binary_instruction.substring(15, 20);
-				rd.setValue(containingProcessor.getRegisterFile().getValue(Integer.parseInt(rd_bin,2)));
+				rd.setValue(Integer.parseInt(rd_bin,2));
 			}
 
 			if((opcode_number%2!=0 && opcode_number<=23) || (opcode_number==22))
 			{
 				rs1.setOperandType(rs1.OperandType.valueOf("Register"));
 				String rs1_bin = binary_instruction.substring(5, 10);
-				rs1.setValue(containingProcessor.getRegisterFile().getValue(Integer.parseInt(rs1_bin,2)));
+				rs1.setValue(Integer.parseInt(rs1_bin,2));
 
 				rs2.setOperandType(rs2.OperandType.valueOf("Immediate"));
 				String rs2_bin = binary_instruction.substring(15);
@@ -78,18 +78,17 @@ public class OperandFetch {
 
 				rd.setOperandType(rd.OperandType.valueOf("Register"));
 				String rd_bin = binary_instruction.substring(10, 15);
-				rd.setValue(containingProcessor.getRegisterFile().getValue(Integer.parseInt(rd_bin,2)));
+				rd.setValue(Integer.parseInt(rd_bin,2));
 			}
 
 			if(opcode_number<=28 && opcode_number>=25)
 			{
 				rs1.setOperandType(rs1.OperandType.valueOf("Register"));
 				String rs1_bin = binary_instruction.substring(5, 10);
-				rs1.setValue(containingProcessor.getRegisterFile().getValue(Integer.parseInt(rs1_bin,2)));
-
+				rs1.setValue(Integer.parseInt(rs1_bin,2));
 				rs2.setOperandType(rs2.OperandType.valueOf("Register"));
 				String rs2_bin = binary_instruction.substring(10, 15);
-				rs2.setValue(containingProcessor.getRegisterFile().getValue(Integer.parseInt(rs2_bin,2)));
+				rs2.setValue(Integer.parseInt(rs2_bin,2));
 
 				rd.setOperandType(rd.OperandType.valueOf("Immediate"));
 				String rd_bin = binary_instruction.substring(15);
@@ -101,13 +100,13 @@ public class OperandFetch {
 				String rd_bin = binary_instruction.substring(5, 10);
 				String imm_bin = binary_instruction.substring(10);
 
-				int rd_val = containingProcessor.getRegisterFile().getValue(Integer.parseInt(rd_bin,2));
+				int rd_val = Integer.parseInt(rd_bin,2);
 				int imm_val = toSignedInteger(imm_bin);
 
 				if(imm_val==0)
 				{
 					rd.setOperandType(rd.OperandType.valueOf("Register"));
-					rd.setValue(containingProcessor.getRegisterFile().getValue(Integer.parseInt(rd_bin,2)));
+					rd.setValue(Integer.parseInt(rd_bin,2));
 				}
 				else
 				{
