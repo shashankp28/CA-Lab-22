@@ -1,8 +1,11 @@
 package processor.pipeline;
 
+import generic.Instruction;
+
 public class OF_EX_LatchType {
 	
 	boolean EX_enable;
+	Instruction instruction;
 	
 	public OF_EX_LatchType()
 	{
@@ -15,6 +18,16 @@ public class OF_EX_LatchType {
 
 	public void setEX_enable(boolean eX_enable) {
 		EX_enable = eX_enable;
+	}
+
+	public Instruction getInstruction()
+	{
+		return instruction;
+	}
+
+	public void setInstruction(Instruction inst)
+	{
+		instruction = inst;
 	}
 
 }
