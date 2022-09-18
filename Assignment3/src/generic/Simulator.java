@@ -17,13 +17,8 @@ public class Simulator {
 	public static void setupSimulation(String assemblyProgramFile, Processor p)
 	{
 		Simulator.processor = p;
-		try {
-
 			loadProgram(assemblyProgramFile);
-		} catch (IOException e) {
-
-			e.printStackTrace();
-		}
+		
 		simulationComplete = false;
 
 
@@ -43,7 +38,6 @@ public class Simulator {
 		 */
 
 		InputStream input = null;
-
 		try {
 
 			input = new FileInputStream(assemblyProgramFile);
@@ -52,14 +46,31 @@ public class Simulator {
 
 			e.printStackTrace();
 		}
+
 		DataInputStream d = new DataInputStream(input);
+		
 
 		int address = 0;
 		boolean isPCset = false;
-		
-		while(d.available() > 0) {
+		int avai = 0;
 
-			int next = d.readInt();
+		try {
+			avai = d.available();
+		  }
+		  catch(IOException e) {
+			e.printStackTrace();
+		  }
+		
+		while(avai > 0) {
+			int next = 0;
+
+			try {
+				next = d.readInt();
+			  }
+			  catch(IOException e) {
+				e.printStackTrace();
+			  }
+
 
 			if(!isPCset)
 			{
