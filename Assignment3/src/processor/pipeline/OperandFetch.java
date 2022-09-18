@@ -54,7 +54,9 @@ public class OperandFetch {
 
 			curr_instruction.setOperationType(OperationType.values()[opcode_number]);
 
-			Operand rs1, rs2, rd;
+			Operand rs1 = new Operand();
+			Operand rs2 = new Operand();
+			Operand rd = new Operand();
 
 			if(opcode_number%2==0 && opcode_number<=20)
 			{
