@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 import generic.Instruction;
 import generic.Operand;
+import generic.Instruction.OperationType;
 import generic.Operand.OperandType;
 
 public class OperandFetch {
@@ -50,8 +51,9 @@ public class OperandFetch {
 			String bin_op_code = binary_instruction.substring(0, 5);
 			int opcode_number = Integer.parseInt(bin_op_code,2);
 			
+			OperationType op_types = new OperandType();
 
-			curr_instruction.setOperationType(curr_instruction.OperationType.values()[opcode_number]);
+			curr_instruction.setOperationType(OperationType.values()[opcode_number]);
 
 			Operand rs1, rs2, rd;
 
