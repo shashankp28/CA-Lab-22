@@ -89,8 +89,8 @@ public class Execute {
 			OperationType ot = inst.getOperationType();
 			int opcode = Arrays.asList(OperationType.values()).indexOf(ot);
 			int PC_curr = containingProcessor.getRegisterFile().getProgramCounter() - 1;
-			int signedInt = toSignedInteger("001");
-			String binary_int = toBinaryOfSpecificPrecision(signedInt, 5);
+			// int signedInt = toSignedInteger("001");
+			// String binary_int = toBinaryOfSpecificPrecision(signedInt, 5);
 
 			int alu_result = 0;
 
