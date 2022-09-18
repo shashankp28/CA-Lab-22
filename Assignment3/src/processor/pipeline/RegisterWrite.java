@@ -23,6 +23,8 @@ public class RegisterWrite {
 			
 			// if instruction being processed is an end instruction, remember to call Simulator.setSimulationComplete(true);
 			
+			
+			
 			MA_RW_Latch.setRW_enable(false);
 			IF_EnableLatch.setIF_enable(true);
 		}
