@@ -1,0 +1,922 @@
+Current PC: 
+9
+Current PC: 
+10
+Current PC: 
+11
+Current PC: 
+12
+0
+8
+PC=0	blt	[Register:3]	[Register:8]	[Immediate:3]
+
+Current PC: 
+13
+Current PC: 
+16
+1
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+40
+20
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+23
+Current PC: 
+24
+2
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+40
+50
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+25
+Current PC: 
+26
+Current PC: 
+27
+Current PC: 
+28
+Current PC: 
+29
+Current PC: 
+30
+3
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+50
+60
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+25
+Current PC: 
+26
+Current PC: 
+27
+Current PC: 
+28
+Current PC: 
+29
+Current PC: 
+30
+4
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+60
+80
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+25
+Current PC: 
+26
+Current PC: 
+27
+Current PC: 
+28
+Current PC: 
+29
+Current PC: 
+30
+5
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+80
+30
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+23
+Current PC: 
+24
+6
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+80
+10
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+23
+Current PC: 
+24
+7
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+80
+70
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+23
+Current PC: 
+24
+8
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+18
+Current PC: 
+19
+1
+8
+PC=0	blt	[Register:3]	[Register:8]	[Immediate:3]
+
+Current PC: 
+13
+Current PC: 
+16
+2
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+20
+40
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+25
+Current PC: 
+26
+Current PC: 
+27
+Current PC: 
+28
+Current PC: 
+29
+Current PC: 
+30
+3
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+40
+50
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+25
+Current PC: 
+26
+Current PC: 
+27
+Current PC: 
+28
+Current PC: 
+29
+Current PC: 
+30
+4
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+50
+60
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+25
+Current PC: 
+26
+Current PC: 
+27
+Current PC: 
+28
+Current PC: 
+29
+Current PC: 
+30
+5
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+60
+30
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+23
+Current PC: 
+24
+6
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+60
+10
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+23
+Current PC: 
+24
+7
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+60
+70
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+25
+Current PC: 
+26
+Current PC: 
+27
+Current PC: 
+28
+Current PC: 
+29
+Current PC: 
+30
+8
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+18
+Current PC: 
+19
+2
+8
+PC=0	blt	[Register:3]	[Register:8]	[Immediate:3]
+
+Current PC: 
+13
+Current PC: 
+16
+3
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+20
+40
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+25
+Current PC: 
+26
+Current PC: 
+27
+Current PC: 
+28
+Current PC: 
+29
+Current PC: 
+30
+4
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+40
+50
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+25
+Current PC: 
+26
+Current PC: 
+27
+Current PC: 
+28
+Current PC: 
+29
+Current PC: 
+30
+5
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+50
+30
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+23
+Current PC: 
+24
+6
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+50
+10
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+23
+Current PC: 
+24
+7
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+50
+60
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+25
+Current PC: 
+26
+Current PC: 
+27
+Current PC: 
+28
+Current PC: 
+29
+Current PC: 
+30
+8
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+18
+Current PC: 
+19
+3
+8
+PC=0	blt	[Register:3]	[Register:8]	[Immediate:3]
+
+Current PC: 
+13
+Current PC: 
+16
+4
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+20
+40
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+25
+Current PC: 
+26
+Current PC: 
+27
+Current PC: 
+28
+Current PC: 
+29
+Current PC: 
+30
+5
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+40
+30
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+23
+Current PC: 
+24
+6
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+40
+10
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+23
+Current PC: 
+24
+7
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+40
+50
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+25
+Current PC: 
+26
+Current PC: 
+27
+Current PC: 
+28
+Current PC: 
+29
+Current PC: 
+30
+8
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+18
+Current PC: 
+19
+4
+8
+PC=0	blt	[Register:3]	[Register:8]	[Immediate:3]
+
+Current PC: 
+13
+Current PC: 
+16
+5
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+20
+30
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+25
+Current PC: 
+26
+Current PC: 
+27
+Current PC: 
+28
+Current PC: 
+29
+Current PC: 
+30
+6
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+30
+10
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+23
+Current PC: 
+24
+7
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+30
+40
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+25
+Current PC: 
+26
+Current PC: 
+27
+Current PC: 
+28
+Current PC: 
+29
+Current PC: 
+30
+8
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+18
+Current PC: 
+19
+5
+8
+PC=0	blt	[Register:3]	[Register:8]	[Immediate:3]
+
+Current PC: 
+13
+Current PC: 
+16
+6
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+20
+10
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+23
+Current PC: 
+24
+7
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+20
+30
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+25
+Current PC: 
+26
+Current PC: 
+27
+Current PC: 
+28
+Current PC: 
+29
+Current PC: 
+30
+8
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+18
+Current PC: 
+19
+6
+8
+PC=0	blt	[Register:3]	[Register:8]	[Immediate:3]
+
+Current PC: 
+13
+Current PC: 
+16
+7
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+20
+Current PC: 
+21
+10
+20
+PC=0	blt	[Register:5]	[Register:6]	[Immediate:3]
+
+Current PC: 
+22
+Current PC: 
+25
+Current PC: 
+26
+Current PC: 
+27
+Current PC: 
+28
+Current PC: 
+29
+Current PC: 
+30
+8
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+18
+Current PC: 
+19
+7
+8
+PC=0	blt	[Register:3]	[Register:8]	[Immediate:3]
+
+Current PC: 
+13
+Current PC: 
+16
+8
+8
+PC=0	blt	[Register:4]	[Register:8]	[Immediate:3]
+
+Current PC: 
+17
+Current PC: 
+18
+Current PC: 
+19
+8
+8
+PC=0	blt	[Register:3]	[Register:8]	[Immediate:3]
+
+Current PC: 
+13
+
+Register File Contents:
+
+PC	: 14
+
+x0	: 0
+x1	: 65535
+x2	: 65535
+x3	: 8
+x4	: 8
+x5	: 10
+x6	: 20
+x7	: 10
+x8	: 8
+x9	: 0
+x10	: 0
+x11	: 0
+x12	: 0
+x13	: 0
+x14	: 0
+x15	: 0
+x16	: 0
+x17	: 0
+x18	: 0
+x19	: 0
+x20	: 0
+x21	: 0
+x22	: 0
+x23	: 0
+x24	: 0
+x25	: 0
+x26	: 0
+x27	: 0
+x28	: 0
+x29	: 0
+x30	: 0
+x31	: 0
+
+
+
+Main Memory Contents:
+
+0		: 80
+1		: 70
+2		: 60
+3		: 50
+4		: 40
+5		: 30
+6		: 20
+7		: 10
+8		: 8
+9		: 281423872
+10		: 285753344
+11		: -1341128696
+12		: -657457149
+13		: -402653184
+14		: 147324929
+15		: 147324929
+16		: -653262845
+17		: 147193857
+18		: -1069547526
+19		: -1328939008
+20		: -1324613632
+21		: -649330685
+22		: 151519233
+23		: -1069547527
+24		: 298741760
+25		: 684032
+26		: -1182400512
+27		: -1178075136
+28		: 151519233
+29		: -1069547533
+30		: 0
+
+
+Hash of the Processor State = 255541867
