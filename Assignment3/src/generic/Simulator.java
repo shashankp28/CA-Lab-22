@@ -55,40 +55,6 @@ public class Simulator {
 		int add_offset = 1;
 		while(dis.available() > 0) {
 
-<<<<<<< HEAD
-		int address = 0;
-		boolean isPCset = false;
-		int avai = 0;
-
-		try {
-			avai = d.available();
-		  }
-		  catch(Exception e) {
-			e.printStackTrace();
-		  }
-		
-		while(avai > 0) {
-			int next = 0;
-
-			try {
-				next = d.readInt();
-			  }
-			  catch(Exception e) {
-				e.printStackTrace();
-			  }
-
-
-			if(!isPCset)
-			{
-				processor.getRegisterFile().setProgramCounter(next);
-				isPCset = true;
-			}
-			
-			else
-			{
-				processor.getMainMemory().setWord(address, next);
-				address+=1;
-=======
 			int next = dis.readInt();
 			switch(address) {
 				case -1:
@@ -97,7 +63,6 @@ public class Simulator {
 				default:
 					processor.getMainMemory().setWord(address, next);
 					break;
->>>>>>> 16c25b145d92092f9eb19f920de39eee18ba0077
 			}
 
 			address += add_offset;
