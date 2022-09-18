@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.io.FileNotFoundException;
 import processor.Clock;
 import processor.Processor;
+import java.io.IOException;
 import generic.Statistics;
 
 public class Simulator {
@@ -16,8 +17,13 @@ public class Simulator {
 	public static void setupSimulation(String assemblyProgramFile, Processor p)
 	{
 		Simulator.processor = p;
-		loadProgram(assemblyProgramFile);
-		
+		try {
+
+			loadProgram(assemblyProgramFile);
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
 		simulationComplete = false;
 
 
