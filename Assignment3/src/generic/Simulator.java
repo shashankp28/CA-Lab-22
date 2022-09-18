@@ -1,7 +1,12 @@
 package generic;
 
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.FileNotFoundException;;
 import processor.Clock;
 import processor.Processor;
+import generic.Statistics;
 
 public class Simulator {
 		
@@ -14,6 +19,8 @@ public class Simulator {
 		loadProgram(assemblyProgramFile);
 		
 		simulationComplete = false;
+
+
 	}
 	
 	static void loadProgram(String assemblyProgramFile)
@@ -28,6 +35,45 @@ public class Simulator {
 		 *     x1 = 65535
 		 *     x2 = 65535
 		 */
+
+		InputStream input = null;
+
+		try {
+
+			input = new FileInputStream(assemblyProgramFile);
+		}
+		catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+		}
+		DataInputStream d = new DataInputStream(input);
+
+		int address = 0;
+		boolean isPCset = false;
+		
+		while(d.available() > 0) {
+
+			int next = d.readInt();
+
+			if(!isPCset)
+			{
+				processor.getRegisterFile().setProgramCounter(next);
+				isPCset = true;
+			}
+			
+			else
+			{
+				processor.getMainMemory().setWord(address, next);
+				address+=1;
+			}
+		}
+
+		int CONST = 65535;
+
+		processor.getRegisterFile().setValue(0, 0);
+		processor.getRegisterFile().setValue(1, CONST);
+		processor.getRegisterFile().setValue(2, CONST);
+
 	}
 	
 	public static void simulate()
@@ -44,6 +90,11 @@ public class Simulator {
 			Clock.incrementClock();
 			processor.getRWUnit().performRW();
 			Clock.incrementClock();
+
+			// Set Statistics
+			Statistics.setNumberOfInstructions(Statistics.getNumberOfInstructions() + 1);
+			Statistics.setNumberOfCycles(Statistics.getNumberOfCycles() + 1);
+
 		}
 		
 		// TODO

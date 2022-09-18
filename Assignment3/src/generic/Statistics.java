@@ -19,6 +19,7 @@ public class Statistics {
 			writer.println("Number of cycles taken = " + numberOfCycles);
 			
 			// TODO add code here to print statistics in the output file
+
 			
 			writer.close();
 		}
@@ -29,11 +30,19 @@ public class Statistics {
 	}
 	
 	// TODO write functions to update statistics
-	public void setNumberOfInstructions(int numberOfInstructions) {
+	public static void setNumberOfInstructions(int numberOfInstructions) {
 		Statistics.numberOfInstructions = numberOfInstructions;
 	}
 
-	public void setNumberOfCycles(int numberOfCycles) {
+	public static int getNumberOfInstructions() {
+		return numberOfInstructions;
+	}
+
+	public static void setNumberOfCycles(int numberOfCycles) {
 		Statistics.numberOfCycles = numberOfCycles;
+	}
+
+	public static int getNumberOfCycles() {
+		return numberOfCycles;
 	}
 }
