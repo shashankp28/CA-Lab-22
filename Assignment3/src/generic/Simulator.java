@@ -13,7 +13,7 @@ import generic.Statistics;
 public class Simulator {
 		
 	static Processor processor;
-	static boolean simulationComplete;
+	static boolean sc;
 	
 	public static void setupSimulation(String assemblyProgramFile, Processor p) {
 
@@ -26,7 +26,7 @@ public class Simulator {
 			e.printStackTrace();
 		}
 		
-		simulationComplete = false;
+		sc = false;
 	}
 	
 	static void loadProgram(String assemblyProgramFile) throws IOException {
@@ -40,31 +40,30 @@ public class Simulator {
 		 *     x1 = 65535
 		 *     x2 = 65535
 		 */
-		InputStream is = null;
+		InputStream input_file = null;
 		try {
 
-			is = new FileInputStream(assemblyProgramFile);
+			input_file = new FileInputStream(assemblyProgramFile);
 		}
 		catch (FileNotFoundException e) {
 
 			e.printStackTrace();
 		}
-		DataInputStream dis = new DataInputStream(is);
+		DataInputStream d_input_file = new DataInputStream(input_file);
 
 		int address = -1;
 		int add_offset = 1;
-		while(dis.available() > 0) {
+		while(d_input_file.available() > 0) {
 
-			int next = dis.readInt();
-			switch(address) {
-				case -1:
-					processor.getRegisterFile().setProgramCounter(next);
-					break;
-				default:
-					processor.getMainMemory().setWord(address, next);
-					break;
+			int next = d_input_file.readInt();
+			if(address == -1)
+			{
+				processor.getRegisterFile().setProgramCounter(next);
 			}
-
+			else
+			{
+				processor.getMainMemory().setWord(address, next);
+			}
 			address += add_offset;
 		}
 		
@@ -77,7 +76,7 @@ public class Simulator {
 
 	public static void simulate() {
 
-		while(simulationComplete == false) {
+		while(sc == false) {
 
 			System.out.println("Current PC: ");
 			System.out.println(processor.getRegisterFile().getProgramCounter());
@@ -99,6 +98,6 @@ public class Simulator {
 	
 	public static void setSimulationComplete(boolean value) {
 
-		simulationComplete = value;
+		sc = value;
 	}
 }
