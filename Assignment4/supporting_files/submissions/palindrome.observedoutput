@@ -1,0 +1,206 @@
+Current PC: 
+1
+Current PC: 
+2
+Current PC: 
+3
+Current PC: 
+4
+Current PC: 
+5
+Current PC: 
+6
+Current PC: 
+7
+Current PC: 
+8
+456765
+0
+PC=0	bgt	[Register:3]	[Register:0]	[Immediate:-5]
+
+Current PC: 
+9
+Current PC: 
+4
+Current PC: 
+5
+Current PC: 
+6
+Current PC: 
+7
+Current PC: 
+8
+45676
+0
+PC=0	bgt	[Register:3]	[Register:0]	[Immediate:-5]
+
+Current PC: 
+9
+Current PC: 
+4
+Current PC: 
+5
+Current PC: 
+6
+Current PC: 
+7
+Current PC: 
+8
+4567
+0
+PC=0	bgt	[Register:3]	[Register:0]	[Immediate:-5]
+
+Current PC: 
+9
+Current PC: 
+4
+Current PC: 
+5
+Current PC: 
+6
+Current PC: 
+7
+Current PC: 
+8
+456
+0
+PC=0	bgt	[Register:3]	[Register:0]	[Immediate:-5]
+
+Current PC: 
+9
+Current PC: 
+4
+Current PC: 
+5
+Current PC: 
+6
+Current PC: 
+7
+Current PC: 
+8
+45
+0
+PC=0	bgt	[Register:3]	[Register:0]	[Immediate:-5]
+
+Current PC: 
+9
+Current PC: 
+4
+Current PC: 
+5
+Current PC: 
+6
+Current PC: 
+7
+Current PC: 
+8
+4
+0
+PC=0	bgt	[Register:3]	[Register:0]	[Immediate:-5]
+
+Current PC: 
+9
+Current PC: 
+4
+Current PC: 
+5
+Current PC: 
+6
+Current PC: 
+7
+Current PC: 
+8
+0
+0
+PC=0	bgt	[Register:3]	[Register:0]	[Immediate:-5]
+
+Current PC: 
+9
+Current PC: 
+10
+4567654
+4567654
+PC=0	beq	[Register:5]	[Register:7]	[Immediate:4]
+
+Current PC: 
+11
+Current PC: 
+15
+Current PC: 
+16
+
+Register File Contents:
+
+PC	: 17
+
+x0	: 0
+x1	: 65535
+x2	: 65535
+x3	: 0
+x4	: 0
+x5	: 4567654
+x6	: 0
+x7	: 4567654
+x8	: 0
+x9	: 0
+x10	: 1
+x11	: 0
+x12	: 0
+x13	: 0
+x14	: 0
+x15	: 0
+x16	: 0
+x17	: 0
+x18	: 0
+x19	: 0
+x20	: 0
+x21	: 0
+x22	: 0
+x23	: 0
+x24	: 0
+x25	: 0
+x26	: 0
+x27	: 0
+x28	: 0
+x29	: 0
+x30	: 4
+x31	: 4
+
+
+
+Main Memory Contents:
+
+0		: 4567654
+1		: -1341784064
+2		: 298741760
+3		: 952631306
+4		: 268173312
+5		: 701366282
+6		: 33320960
+7		: 952500234
+8		: -524156933
+9		: -1341521920
+10		: -917635068
+11		: 311730176
+12		: 445906945
+13		: -402653184
+14		: 311730176
+15		: 177471489
+16		: -402653184
+17		: 0
+18		: 0
+19		: 0
+20		: 0
+21		: 0
+22		: 0
+23		: 0
+24		: 0
+25		: 0
+26		: 0
+27		: 0
+28		: 0
+29		: 0
+30		: 0
+
+
+Hash of the Processor State = 155317940
