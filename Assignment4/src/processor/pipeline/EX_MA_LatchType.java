@@ -7,6 +7,7 @@ public class EX_MA_LatchType {
 	boolean MA_enable;
 	int alu_result;
 	Instruction instruction;
+	boolean nop;
 
 	public EX_MA_LatchType() {
 		MA_enable = false;
@@ -49,6 +50,14 @@ public class EX_MA_LatchType {
 
 	public void setALU_result(int result) {
 		alu_result = result;
+	}
+
+	public boolean getNop() {
+		return nop;
+	}
+	
+	public void setNop(boolean isNop) {
+		nop = isNop;
 	}
 
 }

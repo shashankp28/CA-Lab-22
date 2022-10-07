@@ -52,3 +52,45 @@ make-jar:
 
 BUILD SUCCESSFUL
 Total time: 1 second
+Buildfile: C:\Harrithha\IIT_Dh\College_Academics\Sem_5\CA-Lab-22\Assignment3\supporting_files\submissions\build.xml
+
+build-subprojects:
+
+init:
+     [copy] Copying 1 file to C:\Harrithha\IIT_Dh\College_Academics\Sem_5\CA-Lab-22\Assignment3\supporting_files\submissions\bin
+
+build-project:
+    [javac] Compiling 22 source files to C:\Harrithha\IIT_Dh\College_Academics\Sem_5\CA-Lab-22\Assignment3\supporting_files\submissions\bin
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 8
+    [javac] 1 warning
+
+build:
+
+make-jar:
+      [jar] Building jar: C:\Harrithha\IIT_Dh\College_Academics\Sem_5\CA-Lab-22\Assignment3\supporting_files\submissions\jars\simulator.jar
+
+BUILD SUCCESSFUL
+Total time: 2 seconds
+Buildfile: C:\Harrithha\IIT_Dh\College_Academics\Sem_5\CA-Lab-22\Assignment3\supporting_files\submissions\build.xml
+
+build-subprojects:
+
+init:
+     [copy] Copying 2 files to C:\Harrithha\IIT_Dh\College_Academics\Sem_5\CA-Lab-22\Assignment3\supporting_files\submissions\bin
+
+build-project:
+    [javac] Compiling 22 source files to C:\Harrithha\IIT_Dh\College_Academics\Sem_5\CA-Lab-22\Assignment3\supporting_files\submissions\bin
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 8
+    [javac] C:\Harrithha\IIT_Dh\College_Academics\Sem_5\CA-Lab-22\Assignment3\supporting_files\submissions\src\processor\pipeline\IF_OF_LatchType.java:8: error: invalid method declaration; return type required
+    [javac] 	public if_of_latchtype(boolean of_enable) {
+    [javac] 	       ^
+    [javac] C:\Harrithha\IIT_Dh\College_Academics\Sem_5\CA-Lab-22\Assignment3\supporting_files\submissions\src\processor\pipeline\IF_OF_LatchType.java:12: error: invalid method declaration; return type required
+    [javac] 	public if_of_latchtype(boolean of_enable, int inst) {
+    [javac] 	       ^
+    [javac] 2 errors
+    [javac] 1 warning
+
+BUILD FAILED
+C:\Harrithha\IIT_Dh\College_Academics\Sem_5\CA-Lab-22\Assignment3\supporting_files\submissions\build.xml:27: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds

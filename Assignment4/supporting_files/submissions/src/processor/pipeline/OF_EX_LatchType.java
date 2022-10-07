@@ -6,10 +6,11 @@ public class OF_EX_LatchType {
 	
 	boolean EX_enable;
 	Instruction instruction;
-	
+	boolean NOP;
 	public OF_EX_LatchType()
 	{
 		EX_enable = false;
+		NOP = false;
 	}
 
 	public boolean isEX_enable() {
@@ -20,14 +21,20 @@ public class OF_EX_LatchType {
 		EX_enable = eX_enable;
 	}
 
-	public Instruction getInstruction()
-	{
-		return instruction;
+	public void setInstruction(Instruction instruction) {
+		this.instruction = instruction;
 	}
 
-	public void setInstruction(Instruction inst)
-	{
-		instruction = inst;
+	public Instruction getInstruction() {
+		return this.instruction;
+	}
+	
+	public boolean getIsNOP() {
+		return NOP;
+	}
+	
+	public void setIsNOP(boolean is_NOP) {
+		NOP = is_NOP;
 	}
 
 }

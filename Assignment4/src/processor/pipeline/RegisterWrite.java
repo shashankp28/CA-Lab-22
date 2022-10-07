@@ -16,11 +16,18 @@ public class RegisterWrite {
 		this.containingProcessor = containingProcessor;
 		this.MA_RW_Latch = mA_RW_Latch;
 		this.IF_EnableLatch = iF_EnableLatch;
+
 	}
 	
 	public void performRW()
 	{
-		if(MA_RW_Latch.isRW_enable())
+
+		if (MA_RW_Latch.getNop()) {
+			MA_RW_Latch.setNop(false);
+		}
+		else{
+
+			if(MA_RW_Latch.isRW_enable())
 		{
 			//TODO
 			
@@ -49,6 +56,9 @@ public class RegisterWrite {
 			MA_RW_Latch.setRW_enable(false);
 			IF_EnableLatch.setIF_enable(true);
 		}
+
+		}
+		
 	}
 
 }

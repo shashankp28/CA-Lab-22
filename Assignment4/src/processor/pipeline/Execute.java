@@ -81,7 +81,13 @@ public class Execute {
 	public void performEX()
 	{
 		//TODO
-		if(OF_EX_Latch.isEX_enable())
+		if (OF_EX_Latch.getNop()) {
+			EX_MA_Latch.setNop(true);
+			OF_EX_Latch.setNop(false);
+			EX_MA_Latch.setInstruction(null);
+		}
+		else{
+			if(OF_EX_Latch.isEX_enable())
 		{
 			// Get Instruction from the latch
 			Instruction inst = OF_EX_Latch.getInstruction();
@@ -290,3 +296,5 @@ public class Execute {
 	}
 
 }
+
+		}
