@@ -25,6 +25,7 @@ public class InstructionFetch {
 			{
 				int branch_target = EX_IF_Latch.getPC();
 				containingProcessor.getRegisterFile().setProgramCounter(branch_target);
+				System.out.println("IF - EX_IF_Enable: False");
 				EX_IF_Latch.setIS_enable(false);
 			}
 			int currentPC = containingProcessor.getRegisterFile().getProgramCounter();
@@ -32,8 +33,8 @@ public class InstructionFetch {
 			IF_OF_Latch.setInstruction(newInstruction);
 			containingProcessor.getRegisterFile().setProgramCounter(currentPC + 1);
 			
-		//	IF_EnableLatch.setIF_enable(false);
 			IF_OF_Latch.setOF_enable(true);
+			System.out.println("IF - setOF_Enable: True");
 		}
 	}
 

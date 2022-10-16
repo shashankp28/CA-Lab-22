@@ -1,5 +1,4 @@
 package generic;
-
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -11,7 +10,7 @@ import processor.Processor;
 import generic.Statistics;
 
 public class Simulator {
-		
+			
 	static Processor processor;
 	static boolean sc;
 	
@@ -53,7 +52,8 @@ public class Simulator {
 
 		int address = -1;
 		int add_offset = 1;
-		while(d_input_file.available() > 0) {
+		while(d_input_file.available() > 0) 
+		{
 
 			int next = d_input_file.readInt();
 			if(address == -1)
@@ -77,18 +77,22 @@ public class Simulator {
 	public static void simulate() {
 
 		while(sc == false) {
-
 			System.out.println("Current PC: ");
 			System.out.println(processor.getRegisterFile().getProgramCounter());
 			processor.getRWUnit().performRW();
+			System.out.println("Register Write Completed");
 			Clock.incrementClock();
 			processor.getMAUnit().performMA();
+			System.out.println("Memory Access Completed");
 			Clock.incrementClock();
 			processor.getEXUnit().performEX();
+			System.out.println("Execute Completed");
 			Clock.incrementClock();
 			processor.getOFUnit().performOF();
+			System.out.println("Operand Fetch Completed");
 			Clock.incrementClock();
 			processor.getIFUnit().performIF();
+			System.out.println("Instruction Fetch Completed");
 			Clock.incrementClock();
 
 			Statistics.setNumberOfInstructions(Statistics.getNumberOfInstructions() + 1);

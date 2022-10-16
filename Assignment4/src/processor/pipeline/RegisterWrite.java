@@ -16,18 +16,15 @@ public class RegisterWrite {
 		this.containingProcessor = containingProcessor;
 		this.MA_RW_Latch = mA_RW_Latch;
 		this.IF_EnableLatch = iF_EnableLatch;
-
 	}
 	
 	public void performRW()
 	{
-
 		if (MA_RW_Latch.getNop()) {
 			MA_RW_Latch.setNop(false);
-		}
-		else{
-
-			if(MA_RW_Latch.isRW_enable())
+			System.out.println("RW - MA_RW_Nop: False");
+//			IF_EnableLatch.setIF_enable(true);
+		} else if (MA_RW_Latch.isRW_enable())
 		{
 			//TODO
 			
@@ -51,14 +48,15 @@ public class RegisterWrite {
 			if(operation_number==29)
 			{
 				Simulator.setSimulationComplete(true);
+				System.out.println("RW - Simulation COmplete: True");
 			}
 
-			MA_RW_Latch.setRW_enable(false);
-			IF_EnableLatch.setIF_enable(true);
-		}
+			if (operation_number != 29) {
+				IF_EnableLatch.setIF_enable(true);
+				System.out.println("RW - IF_Enable: True");
 
+			}
 		}
-		
 	}
 
 }

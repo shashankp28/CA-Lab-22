@@ -51,13 +51,11 @@ public class EX_MA_LatchType {
 	public void setALU_result(int result) {
 		alu_result = result;
 	}
-
-	public boolean getNop() {
-		return nop;
+	public void setNop(boolean set_nop){
+		nop = set_nop;
 	}
-	
-	public void setNop(boolean isNop) {
-		nop = isNop;
+	public boolean getNop(){
+		return nop;
 	}
 
 }

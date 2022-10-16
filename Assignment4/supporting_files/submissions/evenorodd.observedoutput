@@ -1,0 +1,348 @@
+Current PC: 
+1
+Register Write Completed
+Memory Access Completed
+Execute Completed
+Operand Fetch Completed
+IF - setOF_Enable: True
+Instruction Fetch Completed
+Current PC: 
+2
+Register Write Completed
+Memory Access Completed
+Execute Completed
+OF - setEX_Enable: True
+Operand Fetch Completed
+IF - setOF_Enable: True
+Instruction Fetch Completed
+Current PC: 
+3
+Register Write Completed
+Memory Access Completed
+EX - MA_enable: True
+Execute Completed
+Conflict Observed
+OF - setIF_Enable: False (Bubble)
+OF - OF_EX_Nop: True (Bubble)
+Conflict Observed
+OF - setIF_Enable: False (Bubble)
+OF - OF_EX_Nop: True (Bubble)
+OF - setEX_Enable: True
+Operand Fetch Completed
+Instruction Fetch Completed
+Current PC: 
+3
+Register Write Completed
+MA - RW_Enable: True
+Memory Access Completed
+EX - EX_MA_Nop: True
+EX - OF_EX_Nop: False
+EX - EX_MA_Inst: Null
+Execute Completed
+Conflict Observed
+OF - setIF_Enable: False (Bubble)
+OF - OF_EX_Nop: True (Bubble)
+Conflict Observed
+OF - setIF_Enable: False (Bubble)
+OF - OF_EX_Nop: True (Bubble)
+OF - setEX_Enable: True
+Operand Fetch Completed
+Instruction Fetch Completed
+Current PC: 
+3
+RW - IF_Enable: True
+Register Write Completed
+MA - MA_RW_Nop: True
+MA - MA_RW_Inst: Null
+MA - EX_MA_Nop: False
+Memory Access Completed
+EX - EX_MA_Nop: True
+EX - OF_EX_Nop: False
+EX - EX_MA_Inst: Null
+Execute Completed
+OF - setEX_Enable: True
+Operand Fetch Completed
+IF - setOF_Enable: True
+Instruction Fetch Completed
+Current PC: 
+4
+RW - MA_RW_Nop: False
+Register Write Completed
+MA - MA_RW_Nop: True
+MA - MA_RW_Inst: Null
+MA - EX_MA_Nop: False
+Memory Access Completed
+EX - MA_enable: True
+Execute Completed
+OF - setIF_Enable: False
+Conflict in division
+Conflict Observed
+OF - setIF_Enable: False (Bubble)
+OF - OF_EX_Nop: True (Bubble)
+Conflict Observed
+OF - setIF_Enable: False (Bubble)
+OF - OF_EX_Nop: True (Bubble)
+OF - setEX_Enable: True
+Operand Fetch Completed
+Instruction Fetch Completed
+Current PC: 
+4
+RW - MA_RW_Nop: False
+Register Write Completed
+MA - RW_Enable: True
+Memory Access Completed
+EX - EX_MA_Nop: True
+EX - OF_EX_Nop: False
+EX - EX_MA_Inst: Null
+Execute Completed
+OF - setIF_Enable: False
+Conflict in division
+Conflict Observed
+OF - setIF_Enable: False (Bubble)
+OF - OF_EX_Nop: True (Bubble)
+Conflict Observed
+OF - setIF_Enable: False (Bubble)
+OF - OF_EX_Nop: True (Bubble)
+OF - setEX_Enable: True
+Operand Fetch Completed
+Instruction Fetch Completed
+Current PC: 
+4
+RW - IF_Enable: True
+Register Write Completed
+MA - MA_RW_Nop: True
+MA - MA_RW_Inst: Null
+MA - EX_MA_Nop: False
+Memory Access Completed
+EX - EX_MA_Nop: True
+EX - OF_EX_Nop: False
+EX - EX_MA_Inst: Null
+Execute Completed
+OF - setIF_Enable: False
+OF - setEX_Enable: True
+Operand Fetch Completed
+Instruction Fetch Completed
+Current PC: 
+4
+RW - MA_RW_Nop: False
+Register Write Completed
+MA - MA_RW_Nop: True
+MA - MA_RW_Inst: Null
+MA - EX_MA_Nop: False
+Memory Access Completed
+EX - IF_Enable: False
+EX - OF_Enable: False
+EX - EX_Enable: False
+0
+1
+PC=0	beq	[Register:0]	[Register:31]	[Immediate:4]
+
+EX - MA_enable: True
+Execute Completed
+Operand Fetch Completed
+Instruction Fetch Completed
+Current PC: 
+4
+RW - MA_RW_Nop: False
+Register Write Completed
+MA - RW_Enable: True
+Memory Access Completed
+Execute Completed
+Operand Fetch Completed
+Instruction Fetch Completed
+Current PC: 
+4
+RW - IF_Enable: True
+Register Write Completed
+MA - RW_Enable: True
+Memory Access Completed
+Execute Completed
+Operand Fetch Completed
+IF - setOF_Enable: True
+Instruction Fetch Completed
+Current PC: 
+5
+RW - IF_Enable: True
+Register Write Completed
+MA - RW_Enable: True
+Memory Access Completed
+Execute Completed
+OF - setEX_Enable: True
+Operand Fetch Completed
+IF - setOF_Enable: True
+Instruction Fetch Completed
+Current PC: 
+6
+RW - IF_Enable: True
+Register Write Completed
+MA - RW_Enable: True
+Memory Access Completed
+EX - MA_enable: True
+Execute Completed
+Conflict Observed
+OF - setIF_Enable: False (Bubble)
+OF - OF_EX_Nop: True (Bubble)
+Conflict Observed
+OF - setIF_Enable: False (Bubble)
+OF - OF_EX_Nop: True (Bubble)
+OF - setEX_Enable: True
+Operand Fetch Completed
+Instruction Fetch Completed
+Current PC: 
+6
+RW - IF_Enable: True
+Register Write Completed
+MA - RW_Enable: True
+Memory Access Completed
+EX - EX_MA_Nop: True
+EX - OF_EX_Nop: False
+EX - EX_MA_Inst: Null
+Execute Completed
+Conflict Observed
+OF - setIF_Enable: False (Bubble)
+OF - OF_EX_Nop: True (Bubble)
+Conflict Observed
+OF - setIF_Enable: False (Bubble)
+OF - OF_EX_Nop: True (Bubble)
+OF - setEX_Enable: True
+Operand Fetch Completed
+Instruction Fetch Completed
+Current PC: 
+6
+RW - IF_Enable: True
+Register Write Completed
+MA - MA_RW_Nop: True
+MA - MA_RW_Inst: Null
+MA - EX_MA_Nop: False
+Memory Access Completed
+EX - EX_MA_Nop: True
+EX - OF_EX_Nop: False
+EX - EX_MA_Inst: Null
+Execute Completed
+OF - setEX_Enable: True
+Operand Fetch Completed
+IF - setOF_Enable: True
+Instruction Fetch Completed
+Current PC: 
+7
+RW - MA_RW_Nop: False
+Register Write Completed
+MA - MA_RW_Nop: True
+MA - MA_RW_Inst: Null
+MA - EX_MA_Nop: False
+Memory Access Completed
+EX - MA_enable: True
+Execute Completed
+OF - setIF_Enable: False (end)
+OF - setEX_Enable: True
+Operand Fetch Completed
+Instruction Fetch Completed
+Current PC: 
+7
+RW - MA_RW_Nop: False
+Register Write Completed
+MA - RW_Enable: True
+Memory Access Completed
+EX - IF_Enable: False
+EX - OF_Enable: False
+EX - EX_Enable: False
+EX - MA_enable: True
+Execute Completed
+Operand Fetch Completed
+Instruction Fetch Completed
+Current PC: 
+7
+RW - IF_Enable: True
+Register Write Completed
+MA - IF_Enable: False (end)
+MA - RW_Enable: True
+Memory Access Completed
+Execute Completed
+Operand Fetch Completed
+Instruction Fetch Completed
+Current PC: 
+7
+RW - Simulation COmplete: True
+Register Write Completed
+MA - IF_Enable: False (end)
+MA - RW_Enable: True
+Memory Access Completed
+Execute Completed
+Operand Fetch Completed
+Instruction Fetch Completed
+
+Register File Contents:
+
+PC	: 7
+
+x0	: 0
+x1	: 65535
+x2	: 65535
+x3	: 5
+x4	: 0
+x5	: 0
+x6	: 0
+x7	: 0
+x8	: 0
+x9	: 0
+x10	: 1
+x11	: 0
+x12	: 0
+x13	: 0
+x14	: 0
+x15	: 0
+x16	: 0
+x17	: 0
+x18	: 0
+x19	: 0
+x20	: 0
+x21	: 0
+x22	: 0
+x23	: 0
+x24	: 0
+x25	: 0
+x26	: 0
+x27	: 0
+x28	: 0
+x29	: 0
+x30	: 0
+x31	: 1
+
+
+
+Main Memory Contents:
+
+0		: 11
+1		: -1341784064
+2		: 952500226
+3		: -935460860
+4		: 311730176
+5		: 177471489
+6		: -402653184
+7		: 311730176
+8		: 445906945
+9		: -402653184
+10		: 0
+11		: 0
+12		: 0
+13		: 0
+14		: 0
+15		: 0
+16		: 0
+17		: 0
+18		: 0
+19		: 0
+20		: 0
+21		: 0
+22		: 0
+23		: 0
+24		: 0
+25		: 0
+26		: 0
+27		: 0
+28		: 0
+29		: 0
+30		: 0
+
+
+Hash of the Processor State = -224294686

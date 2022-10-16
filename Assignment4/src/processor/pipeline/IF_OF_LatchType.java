@@ -10,7 +10,6 @@ public class IF_OF_LatchType {
 		OF_enable = false;
 	}
 
-
 	public boolean isOF_enable() {
 		return OF_enable;
 	}

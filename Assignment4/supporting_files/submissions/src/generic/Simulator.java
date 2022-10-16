@@ -1,5 +1,4 @@
 package generic;
-
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -11,19 +10,22 @@ import processor.Processor;
 import generic.Statistics;
 
 public class Simulator {
-		
+			
 	static Processor processor;
-	static boolean simulationComplete;
+	static boolean sc;
 	
 	public static void setupSimulation(String assemblyProgramFile, Processor p) {
+
 		Simulator.processor = p;
 		try {
+
 			loadProgram(assemblyProgramFile);
 		} catch (IOException e) {
+
 			e.printStackTrace();
 		}
 		
-		simulationComplete = false;
+		sc = false;
 	}
 	
 	static void loadProgram(String assemblyProgramFile) throws IOException {
@@ -37,54 +39,69 @@ public class Simulator {
 		 *     x1 = 65535
 		 *     x2 = 65535
 		 */
-		InputStream is = null;
+		InputStream input_file = null;
 		try {
-			is = new FileInputStream(assemblyProgramFile);
+
+			input_file = new FileInputStream(assemblyProgramFile);
 		}
 		catch (FileNotFoundException e) {
+
 			e.printStackTrace();
 		}
-		DataInputStream dis = new DataInputStream(is);
+		DataInputStream d_input_file = new DataInputStream(input_file);
 
 		int address = -1;
-		while(dis.available() > 0) {
-			int next = dis.readInt();
+		int add_offset = 1;
+		while(d_input_file.available() > 0) 
+		{
+
+			int next = d_input_file.readInt();
 			if(address == -1)
+			{
 				processor.getRegisterFile().setProgramCounter(next);
+			}
 			else
+			{
 				processor.getMainMemory().setWord(address, next);
-			address += 1;
+			}
+			address += add_offset;
 		}
-        
+		
+		int CONST = 65535;
+		
         processor.getRegisterFile().setValue(0, 0);
-        processor.getRegisterFile().setValue(1, 65535);
-        processor.getRegisterFile().setValue(2, 65535);
-        
+        processor.getRegisterFile().setValue(1, CONST);
+        processor.getRegisterFile().setValue(2, CONST);
 	}
-			
+
 	public static void simulate() {
-		while(simulationComplete == false) {
+
+		while(sc == false) {
+			System.out.println("Current PC: ");
+			System.out.println(processor.getRegisterFile().getProgramCounter());
 			processor.getRWUnit().performRW();
+			System.out.println("Register Write Completed");
 			Clock.incrementClock();
 			processor.getMAUnit().performMA();
-			Clock.incrementClock();	
+			System.out.println("Memory Access Completed");
+			Clock.incrementClock();
 			processor.getEXUnit().performEX();
-			Clock.incrementClock();	
+			System.out.println("Execute Completed");
+			Clock.incrementClock();
 			processor.getOFUnit().performOF();
+			System.out.println("Operand Fetch Completed");
 			Clock.incrementClock();
 			processor.getIFUnit().performIF();
+			System.out.println("Instruction Fetch Completed");
 			Clock.incrementClock();
 
 			Statistics.setNumberOfInstructions(Statistics.getNumberOfInstructions() + 1);
 			Statistics.setNumberOfCycles(Statistics.getNumberOfCycles() + 1);
 		}
-		
-		System.out.println("Number of Cycles: " + Statistics.getNumberOfCycles());
-		System.out.println("Number of OF Stalls: " + (Statistics.getNumberOfInstructions() - Statistics.getNumberOfRegisterWriteInstructions()));
-		System.out.println("Number of Wrong Branch Instructions: " + Statistics.getNumberOfBranchTaken());
 	}
 	
 	public static void setSimulationComplete(boolean value) {
-		simulationComplete = value;
+
+		sc = value;
 	}
 }

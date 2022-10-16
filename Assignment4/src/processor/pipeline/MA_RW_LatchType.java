@@ -5,10 +5,10 @@ import generic.Instruction;
 public class MA_RW_LatchType {
 	
 	boolean RW_enable;
-	boolean nop;
 	Instruction instruction;
 	int load_result;
 	int alu_result;
+	boolean nop;
 	
 	public MA_RW_LatchType() {
 	
@@ -81,12 +81,11 @@ public class MA_RW_LatchType {
 		alu_result = result;
 	}
 
-	public boolean getNop() {
-		return nop;
+	public void setNop(boolean set_nop){
+		nop = set_nop;
 	}
-	
-	public void setNop(boolean isNop) {
-		nop = isNop;
+	public boolean getNop(){
+		return nop;
 	}
 
 }

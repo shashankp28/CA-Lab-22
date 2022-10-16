@@ -6,19 +6,25 @@ import generic.Operand;
 import generic.Operand.OperandType;
 import generic.Instruction;
 import processor.Processor;
+import generic.Statistics;
 
 public class Execute {
 	Processor containingProcessor;
 	OF_EX_LatchType OF_EX_Latch;
 	EX_MA_LatchType EX_MA_Latch;
 	EX_IF_LatchType EX_IF_Latch;
+	IF_OF_LatchType IF_OF_Latch;
+	IF_EnableLatchType IF_EnableLatch;
 	
-	public Execute(Processor containingProcessor, OF_EX_LatchType oF_EX_Latch, EX_MA_LatchType eX_MA_Latch, EX_IF_LatchType eX_IF_Latch)
+	public Execute(Processor containingProcessor, OF_EX_LatchType oF_EX_Latch, EX_MA_LatchType eX_MA_Latch, EX_IF_LatchType eX_IF_Latch,
+	IF_OF_LatchType iF_OF_Latch, IF_EnableLatchType iF_EnableLatch)
 	{
 		this.containingProcessor = containingProcessor;
 		this.OF_EX_Latch = oF_EX_Latch;
 		this.EX_MA_Latch = eX_MA_Latch;
 		this.EX_IF_Latch = eX_IF_Latch;
+		this.IF_OF_Latch = iF_OF_Latch;
+		this.IF_EnableLatch = iF_EnableLatch;
 	}
 
 	private static String toBinaryOfSpecificPrecision(int num, int lenOfTargetString) {
@@ -83,11 +89,12 @@ public class Execute {
 		//TODO
 		if (OF_EX_Latch.getNop()) {
 			EX_MA_Latch.setNop(true);
+			System.out.println("EX - EX_MA_Nop: True");
 			OF_EX_Latch.setNop(false);
+			System.out.println("EX - OF_EX_Nop: False");
 			EX_MA_Latch.setInstruction(null);
-		}
-		else{
-			if(OF_EX_Latch.isEX_enable())
+			System.out.println("EX - EX_MA_Inst: Null");
+		} else if(OF_EX_Latch.isEX_enable())
 		{
 			// Get Instruction from the latch
 			Instruction inst = OF_EX_Latch.getInstruction();
@@ -97,6 +104,17 @@ public class Execute {
 			int PC_curr = containingProcessor.getRegisterFile().getProgramCounter() - 1;
 			int signedInt = toSignedInteger("001");
 			String binary_int = toBinaryOfSpecificPrecision(signedInt, 5);
+
+			if (opcode == 24 || opcode == 25 || opcode == 26 || opcode == 27 || opcode == 28 || opcode == 29) {
+				Statistics.setNumberOfBranchTaken(Statistics.getNumberOfBranchTaken() + 2);
+				IF_EnableLatch.setIF_enable(false);
+				System.out.println("EX - IF_Enable: False");
+				IF_OF_Latch.setOF_enable(false);
+				System.out.println("EX - OF_Enable: False");
+				OF_EX_Latch.setEX_enable(false);
+				System.out.println("EX - EX_Enable: False");
+
+			}
 
 			int alu_result = 0;
 
@@ -289,12 +307,10 @@ public class Execute {
 				}
 			}
 			EX_MA_Latch.setALU_result(alu_result);
+			EX_MA_Latch.setMA_enable(true);
+			System.out.println("EX - MA_enable: True");
 		}
-
-		OF_EX_Latch.setEX_enable(false);
-		EX_MA_Latch.setMA_enable(true);
+		
 	}
 
 }
-
-		}

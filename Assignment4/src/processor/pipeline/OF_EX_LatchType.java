@@ -30,12 +30,11 @@ public class OF_EX_LatchType {
 	{
 		instruction = inst;
 	}
-
-	public boolean getNop() {
+	public boolean getNop(){
 		return nop;
 	}
-	
-	public void setNop(boolean isNop) {
-		nop = isNop;
+	public void setNop(boolean nop_to_set){
+		nop = nop_to_set;
 	}
+
 }
