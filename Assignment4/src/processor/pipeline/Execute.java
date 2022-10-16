@@ -3,6 +3,7 @@ import java.util.Arrays;
 import generic.Instruction;
 import generic.Instruction.OperationType;
 import generic.Operand;
+import generic.Statistics;
 import generic.Operand.OperandType;
 import generic.Instruction;
 import processor.Processor;
@@ -55,6 +56,12 @@ public class Execute {
         return (c == '0') ? '1' : '0';
 	}
 
+	public void branchBubble(){
+		IF_OF_Latch.setNop(true);
+		System.out.println("EX - IF_OF_Nop: True (branch)");
+		Statistics.setNumberOfBranchTaken(Statistics.getNumberOfBranchTaken()+1);
+	}
+
 	public static String twosComplement(String bin) {
 		
         String twos = "", ones = "";
@@ -105,16 +112,16 @@ public class Execute {
 			int signedInt = toSignedInteger("001");
 			String binary_int = toBinaryOfSpecificPrecision(signedInt, 5);
 
-			if (opcode == 24 || opcode == 25 || opcode == 26 || opcode == 27 || opcode == 28 || opcode == 29) {
-				Statistics.setNumberOfBranchTaken(Statistics.getNumberOfBranchTaken() + 2);
-				IF_EnableLatch.setIF_enable(false);
-				System.out.println("EX - IF_Enable: False");
-				IF_OF_Latch.setOF_enable(false);
-				System.out.println("EX - OF_Enable: False");
-				OF_EX_Latch.setEX_enable(false);
-				System.out.println("EX - EX_Enable: False");
+			// if (opcode == 24 || opcode == 25 || opcode == 26 || opcode == 27 || opcode == 28 || opcode == 29) {
+			// 	Statistics.setNumberOfBranchTaken(Statistics.getNumberOfBranchTaken() + 2);
+			// 	IF_EnableLatch.setIF_enable(false);
+			// 	System.out.println("EX - IF_Enable: False");
+			// 	IF_OF_Latch.setOF_enable(false);
+			// 	System.out.println("EX - OF_Enable: False");
+			// 	OF_EX_Latch.setEX_enable(false);
+			// 	System.out.println("EX - EX_Enable: False");
 
-			}
+			// }
 
 			int alu_result = 0;
 
@@ -147,6 +154,7 @@ public class Execute {
 						alu_result = (operand_1 / operand_2);
 						int remainder = (operand_1 % operand_2);
 						containingProcessor.getRegisterFile().setValue(31, remainder);
+						Statistics.setNumberOfRegisterWriteInstructions(Statistics.getNumberOfRegisterWriteInstructions()+1);
 						break;
 					case xor:
 						alu_result = (operand_1 ^ operand_2);
@@ -214,6 +222,7 @@ public class Execute {
 						alu_result = (operand_1 / operand_2);
 						int remainder = (operand_1 % operand_2);
 						containingProcessor.getRegisterFile().setValue(31, remainder);
+						Statistics.setNumberOfRegisterWriteInstructions(Statistics.getNumberOfRegisterWriteInstructions()+1);
 						break;
 					case jmp:
 						break;
@@ -259,7 +268,7 @@ public class Execute {
 				
 				alu_result = imm + PC_curr;
 				EX_IF_Latch.setIS_enable(true, alu_result);
-
+				branchBubble();
 			}
 			else if(opcode < 29) {
 
@@ -278,6 +287,7 @@ public class Execute {
 
 							alu_result = imm + PC_curr;
 							EX_IF_Latch.setIS_enable(true, alu_result);
+							branchBubble();
 						}
 						break;
 					case bne:
@@ -285,6 +295,7 @@ public class Execute {
 
 							alu_result = imm + PC_curr;
 							EX_IF_Latch.setIS_enable(true, alu_result);
+							branchBubble();
 						}
 
 						break;
@@ -293,6 +304,7 @@ public class Execute {
 
 							alu_result = imm + PC_curr;
 							EX_IF_Latch.setIS_enable(true, alu_result);
+							branchBubble();
 						}
 						break;
 					case bgt:
@@ -300,6 +312,7 @@ public class Execute {
 
 							alu_result = imm + PC_curr;
 							EX_IF_Latch.setIS_enable(true, alu_result);
+							branchBubble();
 						}
 						break;
 					default:

@@ -1,2 +1,5 @@
-Number of instructions executed = 658
-Number of cycles taken = 658
+Number of instructions executed = 491
+Number of cycles taken = 491
+Data Hazard OF Stalls = 244
+Number of Branch Taken = 88
+Number of Register Write = 588

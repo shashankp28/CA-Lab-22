@@ -4,6 +4,7 @@ public class IF_OF_LatchType {
 	
 	boolean OF_enable;
 	int instruction;
+	boolean Nop;
 	
 	public IF_OF_LatchType()
 	{
@@ -24,6 +25,14 @@ public class IF_OF_LatchType {
 
 	public void setInstruction(int instruction) {
 		this.instruction = instruction;
+	}
+
+	public boolean getNop(){
+		return Nop;
+	}
+
+	public void setNop(boolean set_nop){
+		Nop = set_nop;
 	}
 
 }

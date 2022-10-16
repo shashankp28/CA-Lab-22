@@ -2,9 +2,11 @@ package processor.pipeline;
 
 import generic.Instruction;
 import generic.Simulator;
+import generic.Statistics;
 import generic.Instruction.OperationType;
 import generic.Operand;
 import processor.Processor;
+import generic.Statistics;
 
 public class RegisterWrite {
 	Processor containingProcessor;
@@ -37,12 +39,14 @@ public class RegisterWrite {
 			{
 				int result = MA_RW_Latch.getALU_result();
 				containingProcessor.getRegisterFile().setValue(inst.getDestinationOperand().getValue(), result);
+				Statistics.setNumberOfRegisterWriteInstructions(Statistics.getNumberOfRegisterWriteInstructions()+1);
 			}
 
 			if(operation_number==22)
 			{
 				int result = MA_RW_Latch.getLoad_result();
 				containingProcessor.getRegisterFile().setValue(inst.getDestinationOperand().getValue(), result);
+				Statistics.setNumberOfRegisterWriteInstructions(Statistics.getNumberOfRegisterWriteInstructions()+1);
 			}
 			
 			if(operation_number==29)

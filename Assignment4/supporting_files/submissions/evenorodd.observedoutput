@@ -74,7 +74,6 @@ MA - EX_MA_Nop: False
 Memory Access Completed
 EX - MA_enable: True
 Execute Completed
-OF - setIF_Enable: False
 Conflict in division
 Conflict Observed
 OF - setIF_Enable: False (Bubble)
@@ -95,7 +94,6 @@ EX - EX_MA_Nop: True
 EX - OF_EX_Nop: False
 EX - EX_MA_Inst: Null
 Execute Completed
-OF - setIF_Enable: False
 Conflict in division
 Conflict Observed
 OF - setIF_Enable: False (Bubble)
@@ -118,54 +116,23 @@ EX - EX_MA_Nop: True
 EX - OF_EX_Nop: False
 EX - EX_MA_Inst: Null
 Execute Completed
-OF - setIF_Enable: False
 OF - setEX_Enable: True
-Operand Fetch Completed
-Instruction Fetch Completed
-Current PC: 
-4
-RW - MA_RW_Nop: False
-Register Write Completed
-MA - MA_RW_Nop: True
-MA - MA_RW_Inst: Null
-MA - EX_MA_Nop: False
-Memory Access Completed
-EX - IF_Enable: False
-EX - OF_Enable: False
-EX - EX_Enable: False
-0
-1
-PC=0	beq	[Register:0]	[Register:31]	[Immediate:4]
-
-EX - MA_enable: True
-Execute Completed
-Operand Fetch Completed
-Instruction Fetch Completed
-Current PC: 
-4
-RW - MA_RW_Nop: False
-Register Write Completed
-MA - RW_Enable: True
-Memory Access Completed
-Execute Completed
-Operand Fetch Completed
-Instruction Fetch Completed
-Current PC: 
-4
-RW - IF_Enable: True
-Register Write Completed
-MA - RW_Enable: True
-Memory Access Completed
-Execute Completed
 Operand Fetch Completed
 IF - setOF_Enable: True
 Instruction Fetch Completed
 Current PC: 
 5
-RW - IF_Enable: True
+RW - MA_RW_Nop: False
 Register Write Completed
-MA - RW_Enable: True
+MA - MA_RW_Nop: True
+MA - MA_RW_Inst: Null
+MA - EX_MA_Nop: False
 Memory Access Completed
+0
+1
+PC=0	beq	[Register:0]	[Register:31]	[Immediate:4]
+
+EX - MA_enable: True
 Execute Completed
 OF - setEX_Enable: True
 Operand Fetch Completed
@@ -173,7 +140,7 @@ IF - setOF_Enable: True
 Instruction Fetch Completed
 Current PC: 
 6
-RW - IF_Enable: True
+RW - MA_RW_Nop: False
 Register Write Completed
 MA - RW_Enable: True
 Memory Access Completed
@@ -243,11 +210,10 @@ RW - MA_RW_Nop: False
 Register Write Completed
 MA - RW_Enable: True
 Memory Access Completed
-EX - IF_Enable: False
-EX - OF_Enable: False
-EX - EX_Enable: False
 EX - MA_enable: True
 Execute Completed
+OF - setIF_Enable: False (end)
+OF - setEX_Enable: True
 Operand Fetch Completed
 Instruction Fetch Completed
 Current PC: 
@@ -257,7 +223,10 @@ Register Write Completed
 MA - IF_Enable: False (end)
 MA - RW_Enable: True
 Memory Access Completed
+EX - MA_enable: True
 Execute Completed
+OF - setIF_Enable: False (end)
+OF - setEX_Enable: True
 Operand Fetch Completed
 Instruction Fetch Completed
 Current PC: 
@@ -267,7 +236,10 @@ Register Write Completed
 MA - IF_Enable: False (end)
 MA - RW_Enable: True
 Memory Access Completed
+EX - MA_enable: True
 Execute Completed
+OF - setIF_Enable: False (end)
+OF - setEX_Enable: True
 Operand Fetch Completed
 Instruction Fetch Completed
 

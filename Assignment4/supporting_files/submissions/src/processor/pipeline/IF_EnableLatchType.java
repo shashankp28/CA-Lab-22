@@ -10,8 +10,6 @@ public class IF_EnableLatchType {
 		IF_enable = true;
 	}
 
-	
-
 	public boolean isIF_enable() {
 		return IF_enable;
 	}

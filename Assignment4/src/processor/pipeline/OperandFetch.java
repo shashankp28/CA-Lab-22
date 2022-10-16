@@ -6,6 +6,8 @@ import java.util.Arrays;
 
 import generic.Instruction;
 import generic.Operand;
+import generic.Statistics;
+import generic.Statistics;
 import generic.Instruction.*;
 import generic.Operand.OperandType;
 
@@ -74,6 +76,7 @@ public class OperandFetch {
 		System.out.println("OF - setIF_Enable: False (Bubble)");
 		OF_EX_Latch.setNop(true);
 		System.out.println("OF - OF_EX_Nop: True (Bubble)");
+		Statistics.setNumberOfOFStalls(Statistics.getNumberOfOFStalls()+1);
 	}
 
 	
@@ -87,9 +90,14 @@ public class OperandFetch {
 
 	public void performOF()
 	{
-		//TODO
-		if(IF_OF_Latch.isOF_enable())
-		{
+		if(IF_OF_Latch.getNop()){
+			IF_OF_Latch.setNop(false);
+			System.out.println("OF - IF_OF_Nop: False");
+			OF_EX_Latch.setNop(true);
+			System.out.println("OF - OF_EX_Nop: True");
+			OF_EX_Latch.setInstruction(null);
+			System.out.println("OF - OF_EX_Inst: Null");
+		}else if(IF_OF_Latch.isOF_enable()){
 			Instruction curr_instruction = new Instruction();
 			boolean is_conflict_present = false;
 			int signed_instruction = IF_OF_Latch.getInstruction();
@@ -101,10 +109,10 @@ public class OperandFetch {
 			Instruction instruction_ma_stage = EX_MA_Latch.getInstruction();
 			Instruction instruction_rw_stage = MA_RW_Latch.getInstruction();
 
-			if (opcode_number == 24 || opcode_number == 25 || opcode_number == 26 || opcode_number == 27 || opcode_number == 28 ) {
-				IF_EnableLatch.setIF_enable(false);
-				System.out.println("OF - setIF_Enable: False");
-			}
+			// if (opcode_number == 24 || opcode_number == 25 || opcode_number == 26 || opcode_number == 27 || opcode_number == 28 ) {
+			// 	IF_EnableLatch.setIF_enable(false);
+			// 	System.out.println("OF - setIF_Enable: False");
+			// }
 
 			if(opcode_number%2==0 && opcode_number<=20)
 			{
