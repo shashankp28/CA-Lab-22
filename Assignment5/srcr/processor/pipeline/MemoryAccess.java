@@ -80,7 +80,7 @@ public class MemoryAccess implements Element{
 			}
 			MA_RW_Latch.setRW_enable(true);
 		}
-		//TODO
+		//TOD
 	}
 
 	@Override
