@@ -36,7 +36,25 @@ public class Simulator {
 		/*
 		 * TODO
 		 * 1. load the program into memory according to the program layout described
-		 *    in the ISA specification
+		 *    in the ISA specification.................................0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		 3
+		 32332
 		 * 2. set PC to the address of the first instruction in the main
 		 * 3. set the following registers:
 		 *     x0 = 0

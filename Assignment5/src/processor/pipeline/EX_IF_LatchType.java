@@ -4,6 +4,7 @@ public class EX_IF_LatchType {
 
 	boolean IS_enable;
 	int PC;
+	boolean isBusy;
 	
 	public EX_IF_LatchType() {
 		IS_enable = false;
@@ -11,6 +12,14 @@ public class EX_IF_LatchType {
 
 	public EX_IF_LatchType(boolean is_enable) {
 		IS_enable = is_enable;
+	}
+
+	public void setBusy(boolean busy){
+		isBusy = busy;
+	}
+
+	public boolean getBusy(){
+		return isBusy;
 	}
 
 	public EX_IF_LatchType(boolean is_enable, int pc) {

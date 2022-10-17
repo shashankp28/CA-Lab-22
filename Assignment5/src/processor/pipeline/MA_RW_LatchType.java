@@ -9,6 +9,7 @@ public class MA_RW_LatchType {
 	int load_result;
 	int alu_result;
 	boolean nop;
+	boolean isBusy;
 	
 	public MA_RW_LatchType() {
 	
@@ -18,6 +19,14 @@ public class MA_RW_LatchType {
 	public MA_RW_LatchType(boolean rW_enable) {
 
 		RW_enable = rW_enable;
+	}
+
+	public void setBusy(boolean busy){
+		isBusy = busy;
+	}
+
+	public boolean getBusy(){
+		return isBusy;
 	}
 
 	public MA_RW_LatchType(boolean rW_enable, Instruction instruction) {
