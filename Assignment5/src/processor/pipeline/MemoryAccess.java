@@ -1,9 +1,13 @@
 package processor.pipeline;
 import generic.Instruction;
 import generic.Instruction.OperationType;
-import processor.Processor;
+import processor.*;
+import generic.Simulator;
+import generic.Event.EventType;
+import generic.*;
+import configuration.Configuration;
 
-public class MemoryAccess {
+public class MemoryAccess implements Element {
 	Processor containingProcessor;
 	EX_MA_LatchType EX_MA_Latch;
 	MA_RW_LatchType MA_RW_Latch;
@@ -36,14 +40,30 @@ public class MemoryAccess {
 				MA_RW_Latch.setALU_result(alu_result);
 
 				if (ot == OperationType.load) {
-
-					int lr = containingProcessor.getMainMemory().getWord(alu_result);
-					MA_RW_Latch.setLoad_result(lr);
+					
+					EX_MA_Latch.setBusy(true);
+					Simulator.getEventQueue().addEvent(
+						new MemoryReadEvent(
+							Clock.getCurrentTime() + Configuration.mainMemoryLatency, 
+							(Element) this, 
+							(Element) containingProcessor.getMainMemory(), alu_result)
+					);
+					return;
 				}
 				else if (ot == OperationType.store) {
 
 					int str = containingProcessor.getRegisterFile().getValue(inst.getSourceOperand1().getValue());
-					containingProcessor.getMainMemory().setWord(alu_result, str);
+					EX_MA_Latch.setBusy(true);
+					Simulator.storeresp = Clock.getCurrentTime();
+					Simulator.getEventQueue().addEvent(
+						new MemoryWriteEvent(
+							Clock.getCurrentTime() + Configuration.mainMemoryLatency, 
+							this, 
+							containingProcessor.getMainMemory(), 
+							alu_result, 
+							str)
+					);
+					return;
 				}
 				if (inst.getOperationType().ordinal() == 29) 
 				{
@@ -56,6 +76,17 @@ public class MemoryAccess {
 				System.out.println("MA - RW_Enable: True");
 			}
 		}
+	}
+
+	@Override
+	public void handleEvent(Event e) {
+		if(e.getEventType() == EventType.MemoryResponse) {
+			MemoryResponseEvent event = (MemoryResponseEvent) e ; 
+			MA_RW_Latch.setLoad_result(event.getValue());
+			MA_RW_Latch.setInstruction(EX_MA_Latch.getInstruction());
+			MA_RW_Latch.setRW_enable(true);
+		}
+		EX_MA_Latch.setBusy(false);
 	}
 
 }
