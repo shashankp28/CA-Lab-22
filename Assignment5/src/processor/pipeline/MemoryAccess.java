@@ -2,8 +2,11 @@ package processor.pipeline;
 import generic.Instruction;
 import generic.Instruction.OperationType;
 import processor.Processor;
+import generic.*;
+import generic.Event.EventType;
 
-public class MemoryAccess {
+
+public class MemoryAccess implements Element {
 	Processor containingProcessor;
 	EX_MA_LatchType EX_MA_Latch;
 	MA_RW_LatchType MA_RW_Latch;
@@ -19,7 +22,8 @@ public class MemoryAccess {
 	
 	public void performMA()
 	{
-		//TODO
+
+		if(EX_MA_Latch.isMA_enable() && EX_MA_Latch.getBusy() == false) {
 		if (EX_MA_Latch.getNop()) {
 			MA_RW_Latch.setNop(true);
 			System.out.println("MA - MA_RW_Nop: True");
@@ -57,4 +61,20 @@ public class MemoryAccess {
 		}
 	}
 
+}
+
+@Override
+	public void handleEvent(Event e) {
+		if(e.getEventType() == EventType.MemoryResponse) {
+			MemoryResponseEvent event = (MemoryResponseEvent) e ; 
+			MA_RW_Latch.alu_result = event.getValue();
+			MA_RW_Latch.pc_inst = EX_MA_Latch.pc_inst;
+			MA_RW_Latch.setRW_enable(true);
+			EX_MA_Latch.isBusy = false;
+		}
+		else {
+			EX_MA_Latch.isBusy = false;
+		}
+
+	}
 }

@@ -10,10 +10,13 @@ public class MA_RW_LatchType {
 	int alu_result;
 	boolean nop;
 	boolean isBusy;
+	int pc_inst;
+
 	
 	public MA_RW_LatchType() {
 	
 		RW_enable = false;
+		pc_inst = -1;
 	}
 
 	public MA_RW_LatchType(boolean rW_enable) {

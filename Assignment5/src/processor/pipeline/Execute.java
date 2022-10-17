@@ -94,6 +94,9 @@ public class Execute {
 	public void performEX()
 	{
 		//TODO
+		if(EX_MA_Latch.getBusy() == true) OF_EX_Latch.setBusy(true);
+		else OF_EX_Latch.setBusy(false);
+
 		if (OF_EX_Latch.getNop()) {
 			EX_MA_Latch.setNop(true);
 			System.out.println("EX - EX_MA_Nop: True");

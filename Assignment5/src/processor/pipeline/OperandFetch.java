@@ -90,6 +90,9 @@ public class OperandFetch {
 
 	public void performOF()
 	{
+		if(OF_EX_Latch.getBusy() == true) IF_OF_Latch.setBusy(true);
+		else IF_OF_Latch.setBusy(false);
+
 		if(IF_OF_Latch.getNop()){
 			IF_OF_Latch.setNop(false);
 			System.out.println("OF - IF_OF_Nop: False");
@@ -97,7 +100,7 @@ public class OperandFetch {
 			System.out.println("OF - OF_EX_Nop: True");
 			OF_EX_Latch.setInstruction(null);
 			System.out.println("OF - OF_EX_Inst: Null");
-		}else if(IF_OF_Latch.isOF_enable()){
+		}else if(IF_OF_Latch.isOF_enable() && OF_EX_Latch.getBusy() == false){
 			Instruction curr_instruction = new Instruction();
 			boolean is_conflict_present = false;
 			int signed_instruction = IF_OF_Latch.getInstruction();

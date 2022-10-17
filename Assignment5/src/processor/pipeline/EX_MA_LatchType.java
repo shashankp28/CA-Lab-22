@@ -9,9 +9,11 @@ public class EX_MA_LatchType {
 	Instruction instruction;
 	boolean nop;
 	boolean isBusy;
+	int pc_inst;
 
 	public EX_MA_LatchType() {
 		MA_enable = false;
+		pc_inst = -1;
 	}
 
 	public EX_MA_LatchType(boolean mA_enable) {
