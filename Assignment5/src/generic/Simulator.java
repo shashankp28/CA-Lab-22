@@ -8,13 +8,19 @@ import java.io.InputStream;
 import processor.Clock;
 import processor.Processor;
 import generic.Statistics;
+import generic.EventQueue;
 
 public class Simulator {
 			
 	static Processor processor;
+	static EventQueue eventQueue;
 	static boolean sc;
+	public static int instCount;
 	
 	public static void setupSimulation(String assemblyProgramFile, Processor p) {
+
+		eventQueue = new EventQueue();
+		instCount = 0;
 
 		Simulator.processor = p;
 		try {
@@ -74,6 +80,10 @@ public class Simulator {
         processor.getRegisterFile().setValue(2, CONST);
 	}
 
+	public static EventQueue getEventQueue(){
+		return eventQueue;
+	}
+
 	public static void simulate() {
 
 		while(sc == false) {
@@ -81,16 +91,13 @@ public class Simulator {
 			System.out.println(processor.getRegisterFile().getProgramCounter());
 			processor.getRWUnit().performRW();
 			System.out.println("Register Write Completed");
-			Clock.incrementClock();
 			processor.getMAUnit().performMA();
 			System.out.println("Memory Access Completed");
-			Clock.incrementClock();
 			processor.getEXUnit().performEX();
 			System.out.println("Execute Completed");
-			Clock.incrementClock();
+			eventQueue.processEvents();
 			processor.getOFUnit().performOF();
 			System.out.println("Operand Fetch Completed");
-			Clock.incrementClock();
 			processor.getIFUnit().performIF();
 			System.out.println("Instruction Fetch Completed");
 			Clock.incrementClock();

@@ -4,6 +4,7 @@ public class IF_EnableLatchType {
 
 	
 	boolean IF_enable;
+	boolean isBusy;
 	
 	public IF_EnableLatchType()
 	{
@@ -12,6 +13,14 @@ public class IF_EnableLatchType {
 
 	public boolean isIF_enable() {
 		return IF_enable;
+	}
+	
+	public void setBusy(boolean busy){
+		isBusy = busy;
+	}
+
+	public boolean getBusy(){
+		return isBusy;
 	}
 
 	public void setIF_enable(boolean iF_enable) {

@@ -7,10 +7,19 @@ public class OF_EX_LatchType {
 	boolean EX_enable;
 	Instruction instruction;
 	boolean nop;
+	boolean isBusy;
 	
 	public OF_EX_LatchType()
 	{
 		EX_enable = false;
+	}
+
+	public void setBusy(boolean busy){
+		isBusy = busy;
+	}
+
+	public boolean getBusy(){
+		return isBusy;
 	}
 
 	public boolean isEX_enable() {

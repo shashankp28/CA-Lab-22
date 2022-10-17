@@ -81,16 +81,12 @@ public class Simulator {
 			System.out.println(processor.getRegisterFile().getProgramCounter());
 			processor.getRWUnit().performRW();
 			System.out.println("Register Write Completed");
-			Clock.incrementClock();
 			processor.getMAUnit().performMA();
 			System.out.println("Memory Access Completed");
-			Clock.incrementClock();
 			processor.getEXUnit().performEX();
 			System.out.println("Execute Completed");
-			Clock.incrementClock();
 			processor.getOFUnit().performOF();
 			System.out.println("Operand Fetch Completed");
-			Clock.incrementClock();
 			processor.getIFUnit().performIF();
 			System.out.println("Instruction Fetch Completed");
 			Clock.incrementClock();
