@@ -5,9 +5,19 @@ public class EX_IF_LatchType {
 	boolean IS_enable;
 	int PC;
 	boolean isBusy;
+	int offset;
+	boolean isBranchTaken;
 	
 	public EX_IF_LatchType() {
 		IS_enable = false;
+	}
+
+	public boolean getBranchTaken() {
+		return isBranchTaken;
+	}
+
+	public void setOffset(int new_offset){
+		this.offset = new_offset;
 	}
 
 	public EX_IF_LatchType(boolean is_enable) {
