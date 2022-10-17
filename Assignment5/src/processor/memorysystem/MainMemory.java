@@ -2,7 +2,7 @@ package processor.memorysystem;
 import generic.*;
 import processor.*;
 
-public class MainMemory {
+public class MainMemory implements Element {
 	int[] memory;
 	
 	public MainMemory()
@@ -39,29 +39,29 @@ public class MainMemory {
 	public void handleEvent(Event e) {
 		if (e.getEventType() == Event.EventType.MemoryRead) {
 			System.out.println("Memory Read Event Happening");
-			MemoryReadEvent event = (MemoryReadEvent) e ; 
+			MemoryReadEvent readEvent = (MemoryReadEvent) e ; 
 
-			System.out.println(getWord(event.getAddressToReadFrom()));
+			System.out.println(getWord(readEvent.getAddressToReadFrom()));
 			Simulator.getEventQueue().addEvent( 
 				new MemoryResponseEvent( 
 					Clock.getCurrentTime(), 
 					this, 
-					event.getRequestingElement(), 
-					getWord(event.getAddressToReadFrom())
+					readEvent.getRequestingElement(), 
+					getWord(readEvent.getAddressToReadFrom())
 				)
 			); 
 		}
 		else if(e.getEventType() == Event.EventType.MemoryWrite) {
 			System.out.println("Memory Write Event Happening");
-			MemoryWriteEvent event = (MemoryWriteEvent) e ; 
-			System.out.println(getWord(event.getAddressToWriteTo()));
+			MemoryWriteEvent writeEvent = (MemoryWriteEvent) e ; 
+			System.out.println(getWord(writeEvent.getAddressToWriteTo()));
 
-			this.setWord(event.getAddressToWriteTo(), event.getValue());
+			this.setWord(writeEvent.getAddressToWriteTo(), writeEvent.getValue());
 			Simulator.getEventQueue().addEvent(
 				new ExecutionCompleteEvent(
 					Clock.getCurrentTime(), 
 					this, 
-					event.getRequestingElement())
+					writeEvent.getRequestingElement())
 			);
 		}
 	}
