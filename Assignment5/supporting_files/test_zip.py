@@ -87,6 +87,6 @@ for testcase in os.listdir(test_cases_dir):
 
 os.chdir("..")
 
-shutil.rmtree(submissions_temp_dir)
+# shutil.rmtree(submissions_temp_dir)
 
 print("\ntotal score = " + str(scored_marks) + " out of " + str(total_marks))
