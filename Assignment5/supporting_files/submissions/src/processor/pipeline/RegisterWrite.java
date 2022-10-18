@@ -62,6 +62,8 @@ public class RegisterWrite {
 
 			// }
 			System.out.println("Register Write Completed");
+			Statistics.setThroughput(Statistics.getThroughput()+1);
+			Statistics.setNumberOfInstructions(Statistics.getNumberOfInstructions() + 1);
 			MA_RW_Latch.setRW_enable(false);
 		}
 	}

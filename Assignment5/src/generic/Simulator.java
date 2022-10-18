@@ -90,7 +90,6 @@ public class Simulator {
 			processor.getIFUnit().performIF();
 			
 			Clock.incrementClock();
-			Statistics.setNumberOfInstructions(Statistics.getNumberOfInstructions() + 1);
 			Statistics.setNumberOfCycles(Statistics.getNumberOfCycles() + 1);
 		}
 	}

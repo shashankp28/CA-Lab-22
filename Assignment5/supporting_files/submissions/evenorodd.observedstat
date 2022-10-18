@@ -1,5 +1,6 @@
-Number of instructions executed = 254
+Number of instructions executed = 7
 Number of cycles taken = 254
 Data Hazard OF Stalls = 18
 Number of Branch Taken = 0
 Number of Register Write = 12
+Throughput = 0.027559055

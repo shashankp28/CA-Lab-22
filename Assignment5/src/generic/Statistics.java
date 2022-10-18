@@ -9,6 +9,7 @@ public class Statistics {
 	static int numberOfOFStalls;
 	static int numberOfBranchTaken;
 	static int numberOfRegisterWriteInstructions;
+	static float throughput = 0;
 	
 	public static void printStatistics(String statFile)
 	{
@@ -21,6 +22,7 @@ public class Statistics {
 			writer.println("Data Hazard OF Stalls = " + numberOfOFStalls);
 			writer.println("Number of Branch Taken = " + numberOfBranchTaken);
 			writer.println("Number of Register Write = " + numberOfRegisterWriteInstructions);
+			writer.println("Throughput = " + throughput/numberOfCycles);
 			
 			// TODO add code here to print statistics in the output file
 
@@ -33,6 +35,13 @@ public class Statistics {
 		}
 	}
 
+	public static float getThroughput() {
+		return throughput;
+	}
+
+	public static void setThroughput(float tp) {
+		throughput = tp;
+	}
 
 	public static int getNumberOfInstructions() {
 		return numberOfInstructions;
