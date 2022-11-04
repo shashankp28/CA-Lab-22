@@ -1,0 +1,318 @@
+handle event cache memory read
+in the Cache 1
+Missed
+Memory Read Event Happening
+-1341784064
+handle event cache memory read
+in the Cache 1
+Memory is responding
+insStr 10110000000001100000000000000000
+handle event cache memory read
+in the Cache 0
+Missed
+handle event cache memory read
+in the Cache 2
+Missed
+Memory Read Event Happening
+11
+handle event cache memory read
+in the Cache 0
+Memory Read Event Happening
+285753344
+handle event cache memory read
+in the Cache 2
+RW 1	rs1:0	rs2:70000	rd:3	imm:0	alu:11
+Memory is responding
+insStr 10001000010000100000000000000
+RW 2	rs1:0	rs2:0	rd:4	imm:70000	alu:0
+handle event cache memory read
+in the Cache 3
+Missed
+Memory Read Event Happening
+952631298
+handle event cache memory read
+in the Cache 3
+Memory is responding
+insStr 111000110010000000000000000010
+RW 3	rs1:11	rs2:70000	rd:4	imm:2	alu:5
+handle event cache memory read
+in the Cache 4
+Missed
+Memory Read Event Happening
+294412288
+handle event cache memory read
+in the Cache 4
+Memory is responding
+insStr 10001100011000110000000000000
+RW 4	rs1:0	rs2:0	rd:6	imm:70000	alu:0
+handle event cache memory read
+in the Cache 5
+Missed
+Memory Read Event Happening
+160169986
+handle event cache memory read
+in the Cache 5
+Memory is responding
+insStr 1001100011000000000000000010
+RW 5	rs1:0	rs2:70000	rd:6	imm:2	alu:2
+handle event cache memory read
+in the Cache 6
+Missed
+Memory Read Event Happening
+-511180795
+handle event cache memory read
+in the Cache 6
+Memory is responding
+insStr 11100001100010000000000000000101
+RW 6	rs1:2	rs2:70000	rd:4	imm:5	alu:70000
+handle event cache memory read
+in the Cache 7
+Missed
+Memory Read Event Happening
+818704384
+handle event cache memory read
+in the Cache 7
+Memory is responding
+insStr 110000110011000111000000000000
+RW 7	rs1:11	rs2:2	rd:7	imm:70000	alu:5
+handle event cache memory read
+in the Cache 8
+Missed
+Memory Read Event Happening
+-935460858
+handle event cache memory read
+in the Cache 8
+Memory is responding
+insStr 11001000001111100000000000000110
+RW 8	rs1:0	rs2:70000	rd:31	imm:6	alu:70000
+handle event cache memory read
+in the Cache 9
+Missed
+Memory Read Event Happening
+160169985
+handle event cache memory read
+in the Cache 9
+Memory is responding
+insStr 1001100011000000000000000001
+RW 9	rs1:2	rs2:70000	rd:6	imm:1	alu:3
+handle event cache memory read
+in the Cache 10
+Missed
+Memory Read Event Happening
+-1069547524
+handle event cache memory read
+in the Cache 10
+Memory is responding
+insStr 11000000001111111111111111111100
+RW 10	rs1:70000	rs2:70000	rd:0	imm:-4	alu:70000
+handle event cache memory read
+in the Cache 11
+Missed
+Memory Read Event Happening
+311730176
+handle event cache memory read
+in the Cache 11
+Memory is responding
+insStr 0
+RW 11	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 6
+Memory is responding
+insStr 11100001100010000000000000000101
+RW 6	rs1:3	rs2:70000	rd:4	imm:5	alu:70000
+handle event cache memory read
+in the Cache 7
+Memory is responding
+insStr 110000110011000111000000000000
+RW 7	rs1:11	rs2:3	rd:7	imm:70000	alu:3
+handle event cache memory read
+in the Cache 8
+Memory is responding
+insStr 11001000001111100000000000000110
+RW 8	rs1:0	rs2:70000	rd:31	imm:6	alu:70000
+handle event cache memory read
+in the Cache 9
+Memory is responding
+insStr 1001100011000000000000000001
+RW 9	rs1:3	rs2:70000	rd:6	imm:1	alu:4
+handle event cache memory read
+in the Cache 10
+Memory is responding
+insStr 11000000001111111111111111111100
+RW 10	rs1:70000	rs2:70000	rd:0	imm:-4	alu:70000
+handle event cache memory read
+in the Cache 11
+Memory is responding
+insStr 0
+RW 11	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 6
+Memory is responding
+insStr 11100001100010000000000000000101
+RW 6	rs1:4	rs2:70000	rd:4	imm:5	alu:70000
+handle event cache memory read
+in the Cache 7
+Memory is responding
+insStr 110000110011000111000000000000
+RW 7	rs1:11	rs2:4	rd:7	imm:70000	alu:2
+handle event cache memory read
+in the Cache 8
+Memory is responding
+insStr 11001000001111100000000000000110
+RW 8	rs1:0	rs2:70000	rd:31	imm:6	alu:70000
+handle event cache memory read
+in the Cache 9
+Memory is responding
+insStr 1001100011000000000000000001
+RW 9	rs1:4	rs2:70000	rd:6	imm:1	alu:5
+handle event cache memory read
+in the Cache 10
+Memory is responding
+insStr 11000000001111111111111111111100
+RW 10	rs1:70000	rs2:70000	rd:0	imm:-4	alu:70000
+handle event cache memory read
+in the Cache 11
+Memory is responding
+insStr 0
+RW 11	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 6
+Memory is responding
+insStr 11100001100010000000000000000101
+RW 6	rs1:5	rs2:70000	rd:4	imm:5	alu:70000
+handle event cache memory read
+in the Cache 7
+Memory is responding
+insStr 110000110011000111000000000000
+RW 7	rs1:11	rs2:5	rd:7	imm:70000	alu:2
+handle event cache memory read
+in the Cache 8
+Memory is responding
+insStr 11001000001111100000000000000110
+RW 8	rs1:0	rs2:70000	rd:31	imm:6	alu:70000
+handle event cache memory read
+in the Cache 9
+Memory is responding
+insStr 1001100011000000000000000001
+RW 9	rs1:5	rs2:70000	rd:6	imm:1	alu:6
+handle event cache memory read
+in the Cache 10
+Memory is responding
+insStr 11000000001111111111111111111100
+RW 10	rs1:70000	rs2:70000	rd:0	imm:-4	alu:70000
+handle event cache memory read
+in the Cache 11
+Memory is responding
+insStr 0
+RW 11	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 6
+Memory is responding
+insStr 11100001100010000000000000000101
+RW 6	rs1:6	rs2:70000	rd:4	imm:5	alu:70000
+handle event cache memory read
+in the Cache 7
+Memory is responding
+insStr 0
+RW 7	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 11
+Memory is responding
+insStr 10010100101001010000000000000
+RW 11	rs1:0	rs2:0	rd:10	imm:70000	alu:0
+handle event cache memory read
+in the Cache 12
+Missed
+Memory Read Event Happening
+177471489
+handle event cache memory read
+in the Cache 12
+Memory is responding
+insStr 1010100101000000000000000001
+RW 12	rs1:0	rs2:70000	rd:10	imm:1	alu:1
+handle event cache memory read
+in the Cache 13
+Missed
+Memory Read Event Happening
+-402653184
+handle event cache memory read
+in the Cache 13
+Memory is responding
+insStr 11101000000000000000000000000000
+RW 13	rs1:70000	rs2:70000	rd:70000	imm:70000	alu:70000
+
+Register File Contents:
+
+PC	: 14
+
+x0	: 0
+x1	: 65535
+x2	: 65535
+x3	: 11
+x4	: 5
+x5	: 0
+x6	: 6
+x7	: 2
+x8	: 0
+x9	: 0
+x10	: 1
+x11	: 0
+x12	: 0
+x13	: 0
+x14	: 0
+x15	: 0
+x16	: 0
+x17	: 0
+x18	: 0
+x19	: 0
+x20	: 0
+x21	: 0
+x22	: 0
+x23	: 0
+x24	: 0
+x25	: 0
+x26	: 0
+x27	: 0
+x28	: 0
+x29	: 0
+x30	: 0
+x31	: 1
+
+
+
+Main Memory Contents:
+
+0		: 11
+1		: -1341784064
+2		: 285753344
+3		: 952631298
+4		: 294412288
+5		: 160169986
+6		: -511180795
+7		: 818704384
+8		: -935460858
+9		: 160169985
+10		: -1069547524
+11		: 311730176
+12		: 177471489
+13		: -402653184
+14		: 311730176
+15		: 445906945
+16		: -402653184
+17		: 0
+18		: 0
+19		: 0
+20		: 0
+21		: 0
+22		: 0
+23		: 0
+24		: 0
+25		: 0
+26		: 0
+27		: 0
+28		: 0
+29		: 0
+30		: 0
+
+
+Hash of the Processor State = -1414219998

@@ -52,7 +52,6 @@ for testcase in os.listdir(test_cases_dir):
 
 		stdout_file = open("./" + testcase.split(".")[0] + ".observedoutput", 'w')
 		popen_args = ["java", "-Xmx1g", "-jar", "jars/simulator.jar", "./src/configuration/config.xml", "./" + testcase.split(".")[0] + ".observedstat", test_cases_dir + "/" + testcase]
-		print(test_cases_dir + "/" + testcase)
 #		print popen_args
 		proc = subprocess.Popen(popen_args, stdout = stdout_file, stderr = stdout_file, shell = True)
 		timer = Timer(5, proc.kill)

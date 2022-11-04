@@ -1,0 +1,915 @@
+handle event cache memory read
+in the Cache 1
+Missed
+Memory Read Event Happening
+134610944
+handle event cache memory read
+in the Cache 1
+Memory is responding
+insStr 1000000001100000000000000000
+RW 1	rs1:0	rs2:70000	rd:3	imm:0	alu:0
+handle event cache memory read
+in the Cache 2
+Missed
+Memory Read Event Happening
+134742017
+handle event cache memory read
+in the Cache 2
+Memory is responding
+insStr 1000000010000000000000000001
+RW 2	rs1:0	rs2:70000	rd:4	imm:1	alu:1
+handle event cache memory read
+in the Cache 3
+Missed
+Memory Read Event Happening
+13127680
+handle event cache memory read
+in the Cache 3
+Memory is responding
+insStr 110010000101000000000000
+RW 3	rs1:0	rs2:1	rd:5	imm:70000	alu:1
+handle event cache memory read
+in the Cache 4
+Missed
+Memory Read Event Happening
+-1341390848
+handle event cache memory read
+in the Cache 4
+Memory is responding
+insStr 10110000000011000000000000000000
+handle event cache memory read
+in the Cache 0
+Missed
+handle event cache memory read
+in the Cache 5
+Missed
+Memory Read Event Happening
+10
+handle event cache memory read
+in the Cache 0
+Memory Read Event Happening
+135200767
+handle event cache memory read
+in the Cache 5
+RW 4	rs1:0	rs2:70000	rd:6	imm:0	alu:10
+Memory is responding
+insStr 1000000011101111111111111111
+RW 5	rs1:0	rs2:70000	rd:7	imm:65535	alu:65535
+handle event cache memory read
+in the Cache 6
+Missed
+Memory Read Event Happening
+135266304
+handle event cache memory read
+in the Cache 6
+Memory is responding
+insStr 1000000100000000000000000000
+RW 6	rs1:0	rs2:70000	rd:8	imm:0	alu:0
+handle event cache memory read
+in the Cache 7
+Missed
+Memory Read Event Happening
+-1194459136
+handle event cache memory read
+in the Cache 7
+Memory is responding
+insStr 10111000110011100000000000000000
+handle event cache memory read
+in the Cache 8
+Missed
+handle event cache memory write
+Memory Read Event Happening
+432930817
+handle event cache memory read
+in the Cache 8
+Memory is responding
+insStr 11001110011100000000000000001
+RW 8	rs1:65535	rs2:70000	rd:7	imm:1	alu:65534
+handle event cache memory read
+in the Cache 9
+Missed
+Memory Read Event Happening
+168820737
+handle event cache memory read
+in the Cache 9
+Memory is responding
+insStr 1010000100000000000000000001
+RW 9	rs1:0	rs2:70000	rd:8	imm:1	alu:1
+handle event cache memory read
+in the Cache 10
+Missed
+Memory Read Event Happening
+-1190264832
+handle event cache memory read
+in the Cache 10
+Memory is responding
+insStr 10111001000011100000000000000000
+handle event cache memory read
+in the Cache 11
+Missed
+handle event cache memory write
+Memory Read Event Happening
+432930817
+handle event cache memory read
+in the Cache 11
+Memory is responding
+insStr 11001110011100000000000000001
+RW 11	rs1:65534	rs2:70000	rd:7	imm:1	alu:65533
+handle event cache memory read
+in the Cache 12
+Missed
+Memory Read Event Happening
+168820737
+handle event cache memory read
+in the Cache 12
+Memory is responding
+insStr 1010000100000000000000000001
+RW 12	rs1:1	rs2:70000	rd:8	imm:1	alu:2
+handle event cache memory read
+in the Cache 13
+Missed
+Memory Read Event Happening
+-636747774
+handle event cache memory read
+in the Cache 13
+Memory is responding
+insStr 11011010000011000000000000000010
+RW 13	rs1:2	rs2:70000	rd:6	imm:2	alu:70000
+handle event cache memory read
+in the Cache 14
+Missed
+Memory Read Event Happening
+-402653184
+handle event cache memory read
+in the Cache 14
+Memory is responding
+insStr 0
+RW 14	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 15
+Missed
+Memory Read Event Happening
+13127680
+handle event cache memory read
+in the Cache 15
+Memory is responding
+insStr 110010000101000000000000
+RW 15	rs1:0	rs2:1	rd:5	imm:70000	alu:1
+handle event cache memory read
+in the Cache 16
+Missed
+Memory Read Event Happening
+-1186070528
+handle event cache memory read
+in the Cache 16
+Memory is responding
+insStr 10111001010011100000000000000000
+handle event cache memory read
+in the Cache 17
+Missed
+handle event cache memory write
+Memory Read Event Happening
+432930817
+handle event cache memory read
+in the Cache 17
+Memory is responding
+insStr 11001110011100000000000000001
+RW 17	rs1:65533	rs2:70000	rd:7	imm:1	alu:65532
+handle event cache memory read
+in the Cache 18
+Missed
+Memory Read Event Happening
+168820737
+handle event cache memory read
+in the Cache 18
+Memory is responding
+insStr 1010000100000000000000000001
+RW 18	rs1:2	rs2:70000	rd:8	imm:1	alu:3
+handle event cache memory read
+in the Cache 19
+Missed
+Memory Read Event Happening
+536576
+handle event cache memory read
+in the Cache 19
+Memory is responding
+insStr 10000011000000000000
+RW 19	rs1:0	rs2:1	rd:3	imm:70000	alu:1
+handle event cache memory read
+in the Cache 20
+Missed
+Memory Read Event Happening
+671744
+handle event cache memory read
+in the Cache 20
+Memory is responding
+insStr 10100100000000000000
+RW 20	rs1:0	rs2:1	rd:4	imm:70000	alu:1
+handle event cache memory read
+in the Cache 21
+Missed
+Memory Read Event Happening
+-1069547528
+handle event cache memory read
+in the Cache 21
+Memory is responding
+insStr 11000000001111111111111111111000
+RW 21	rs1:70000	rs2:70000	rd:0	imm:-8	alu:70000
+handle event cache memory read
+in the Cache 22
+Missed
+Memory Read Event Happening
+0
+handle event cache memory read
+in the Cache 22
+Memory is responding
+insStr 0
+RW 22	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 13
+Memory is responding
+insStr 11011010000011000000000000000010
+RW 13	rs1:3	rs2:70000	rd:6	imm:2	alu:70000
+handle event cache memory read
+in the Cache 14
+Memory is responding
+insStr 0
+RW 14	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 15
+Memory is responding
+insStr 110010000101000000000000
+RW 15	rs1:1	rs2:1	rd:5	imm:70000	alu:2
+handle event cache memory read
+in the Cache 16
+Memory is responding
+insStr 10111001010011100000000000000000
+handle event cache memory read
+in the Cache 17
+handle event cache memory write
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+Memory is responding
+insStr 11001110011100000000000000001
+RW 17	rs1:65532	rs2:70000	rd:7	imm:1	alu:65531
+handle event cache memory read
+in the Cache 18
+Memory is responding
+insStr 1010000100000000000000000001
+RW 18	rs1:3	rs2:70000	rd:8	imm:1	alu:4
+handle event cache memory read
+in the Cache 19
+Memory is responding
+insStr 10000011000000000000
+RW 19	rs1:0	rs2:1	rd:3	imm:70000	alu:1
+handle event cache memory read
+in the Cache 20
+Memory is responding
+insStr 10100100000000000000
+RW 20	rs1:0	rs2:2	rd:4	imm:70000	alu:2
+handle event cache memory read
+in the Cache 21
+Memory is responding
+insStr 11000000001111111111111111111000
+RW 21	rs1:70000	rs2:70000	rd:0	imm:-8	alu:70000
+handle event cache memory read
+in the Cache 22
+Memory is responding
+insStr 0
+RW 22	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 13
+Memory is responding
+insStr 11011010000011000000000000000010
+RW 13	rs1:4	rs2:70000	rd:6	imm:2	alu:70000
+handle event cache memory read
+in the Cache 14
+Memory is responding
+insStr 0
+RW 14	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 15
+Memory is responding
+insStr 110010000101000000000000
+RW 15	rs1:1	rs2:2	rd:5	imm:70000	alu:3
+handle event cache memory read
+in the Cache 16
+Memory is responding
+insStr 10111001010011100000000000000000
+handle event cache memory read
+in the Cache 17
+handle event cache memory write
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+Memory is responding
+insStr 11001110011100000000000000001
+RW 17	rs1:65531	rs2:70000	rd:7	imm:1	alu:65530
+handle event cache memory read
+in the Cache 18
+Memory is responding
+insStr 1010000100000000000000000001
+RW 18	rs1:4	rs2:70000	rd:8	imm:1	alu:5
+handle event cache memory read
+in the Cache 19
+Memory is responding
+insStr 10000011000000000000
+RW 19	rs1:0	rs2:2	rd:3	imm:70000	alu:2
+handle event cache memory read
+in the Cache 20
+Memory is responding
+insStr 10100100000000000000
+RW 20	rs1:0	rs2:3	rd:4	imm:70000	alu:3
+handle event cache memory read
+in the Cache 21
+Memory is responding
+insStr 11000000001111111111111111111000
+RW 21	rs1:70000	rs2:70000	rd:0	imm:-8	alu:70000
+handle event cache memory read
+in the Cache 22
+Memory is responding
+insStr 0
+RW 22	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 13
+Memory is responding
+insStr 11011010000011000000000000000010
+RW 13	rs1:5	rs2:70000	rd:6	imm:2	alu:70000
+handle event cache memory read
+in the Cache 14
+Memory is responding
+insStr 0
+RW 14	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 15
+Memory is responding
+insStr 110010000101000000000000
+RW 15	rs1:2	rs2:3	rd:5	imm:70000	alu:5
+handle event cache memory read
+in the Cache 16
+Memory is responding
+insStr 10111001010011100000000000000000
+handle event cache memory read
+in the Cache 17
+handle event cache memory write
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+Memory is responding
+insStr 11001110011100000000000000001
+RW 17	rs1:65530	rs2:70000	rd:7	imm:1	alu:65529
+handle event cache memory read
+in the Cache 18
+Memory is responding
+insStr 1010000100000000000000000001
+RW 18	rs1:5	rs2:70000	rd:8	imm:1	alu:6
+handle event cache memory read
+in the Cache 19
+Memory is responding
+insStr 10000011000000000000
+RW 19	rs1:0	rs2:3	rd:3	imm:70000	alu:3
+handle event cache memory read
+in the Cache 20
+Memory is responding
+insStr 10100100000000000000
+RW 20	rs1:0	rs2:5	rd:4	imm:70000	alu:5
+handle event cache memory read
+in the Cache 21
+Memory is responding
+insStr 11000000001111111111111111111000
+RW 21	rs1:70000	rs2:70000	rd:0	imm:-8	alu:70000
+handle event cache memory read
+in the Cache 22
+Memory is responding
+insStr 0
+RW 22	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 13
+Memory is responding
+insStr 11011010000011000000000000000010
+RW 13	rs1:6	rs2:70000	rd:6	imm:2	alu:70000
+handle event cache memory read
+in the Cache 14
+Memory is responding
+insStr 0
+RW 14	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 15
+Memory is responding
+insStr 110010000101000000000000
+RW 15	rs1:3	rs2:5	rd:5	imm:70000	alu:8
+handle event cache memory read
+in the Cache 16
+Memory is responding
+insStr 10111001010011100000000000000000
+handle event cache memory read
+in the Cache 17
+handle event cache memory write
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+Memory is responding
+insStr 11001110011100000000000000001
+RW 17	rs1:65529	rs2:70000	rd:7	imm:1	alu:65528
+handle event cache memory read
+in the Cache 18
+Memory is responding
+insStr 1010000100000000000000000001
+RW 18	rs1:6	rs2:70000	rd:8	imm:1	alu:7
+handle event cache memory read
+in the Cache 19
+Memory is responding
+insStr 10000011000000000000
+RW 19	rs1:0	rs2:5	rd:3	imm:70000	alu:5
+handle event cache memory read
+in the Cache 20
+Memory is responding
+insStr 10100100000000000000
+RW 20	rs1:0	rs2:8	rd:4	imm:70000	alu:8
+handle event cache memory read
+in the Cache 21
+Memory is responding
+insStr 11000000001111111111111111111000
+RW 21	rs1:70000	rs2:70000	rd:0	imm:-8	alu:70000
+handle event cache memory read
+in the Cache 22
+Memory is responding
+insStr 0
+RW 22	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 13
+Memory is responding
+insStr 11011010000011000000000000000010
+RW 13	rs1:7	rs2:70000	rd:6	imm:2	alu:70000
+handle event cache memory read
+in the Cache 14
+Memory is responding
+insStr 0
+RW 14	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 15
+Memory is responding
+insStr 110010000101000000000000
+RW 15	rs1:5	rs2:8	rd:5	imm:70000	alu:13
+handle event cache memory read
+in the Cache 16
+Memory is responding
+insStr 10111001010011100000000000000000
+handle event cache memory read
+in the Cache 17
+handle event cache memory write
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+Memory is responding
+insStr 11001110011100000000000000001
+RW 17	rs1:65528	rs2:70000	rd:7	imm:1	alu:65527
+handle event cache memory read
+in the Cache 18
+Memory is responding
+insStr 1010000100000000000000000001
+RW 18	rs1:7	rs2:70000	rd:8	imm:1	alu:8
+handle event cache memory read
+in the Cache 19
+Memory is responding
+insStr 10000011000000000000
+RW 19	rs1:0	rs2:8	rd:3	imm:70000	alu:8
+handle event cache memory read
+in the Cache 20
+Memory is responding
+insStr 10100100000000000000
+RW 20	rs1:0	rs2:13	rd:4	imm:70000	alu:13
+handle event cache memory read
+in the Cache 21
+Memory is responding
+insStr 11000000001111111111111111111000
+RW 21	rs1:70000	rs2:70000	rd:0	imm:-8	alu:70000
+handle event cache memory read
+in the Cache 22
+Memory is responding
+insStr 0
+RW 22	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 13
+Memory is responding
+insStr 11011010000011000000000000000010
+RW 13	rs1:8	rs2:70000	rd:6	imm:2	alu:70000
+handle event cache memory read
+in the Cache 14
+Memory is responding
+insStr 0
+RW 14	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 15
+Memory is responding
+insStr 110010000101000000000000
+RW 15	rs1:8	rs2:13	rd:5	imm:70000	alu:21
+handle event cache memory read
+in the Cache 16
+Memory is responding
+insStr 10111001010011100000000000000000
+handle event cache memory read
+in the Cache 17
+handle event cache memory write
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+Memory is responding
+insStr 11001110011100000000000000001
+RW 17	rs1:65527	rs2:70000	rd:7	imm:1	alu:65526
+handle event cache memory read
+in the Cache 18
+Memory is responding
+insStr 1010000100000000000000000001
+RW 18	rs1:8	rs2:70000	rd:8	imm:1	alu:9
+handle event cache memory read
+in the Cache 19
+Memory is responding
+insStr 10000011000000000000
+RW 19	rs1:0	rs2:13	rd:3	imm:70000	alu:13
+handle event cache memory read
+in the Cache 20
+Memory is responding
+insStr 10100100000000000000
+RW 20	rs1:0	rs2:21	rd:4	imm:70000	alu:21
+handle event cache memory read
+in the Cache 21
+Memory is responding
+insStr 11000000001111111111111111111000
+RW 21	rs1:70000	rs2:70000	rd:0	imm:-8	alu:70000
+handle event cache memory read
+in the Cache 22
+Memory is responding
+insStr 0
+RW 22	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 13
+Memory is responding
+insStr 11011010000011000000000000000010
+RW 13	rs1:9	rs2:70000	rd:6	imm:2	alu:70000
+handle event cache memory read
+in the Cache 14
+Memory is responding
+insStr 0
+RW 14	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 15
+Memory is responding
+insStr 110010000101000000000000
+RW 15	rs1:13	rs2:21	rd:5	imm:70000	alu:34
+handle event cache memory read
+in the Cache 16
+Memory is responding
+insStr 10111001010011100000000000000000
+handle event cache memory read
+in the Cache 17
+handle event cache memory write
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+IF-OF is busy
+Memory is responding
+insStr 11001110011100000000000000001
+RW 17	rs1:65526	rs2:70000	rd:7	imm:1	alu:65525
+handle event cache memory read
+in the Cache 18
+Memory is responding
+insStr 1010000100000000000000000001
+RW 18	rs1:9	rs2:70000	rd:8	imm:1	alu:10
+handle event cache memory read
+in the Cache 19
+Memory is responding
+insStr 10000011000000000000
+RW 19	rs1:0	rs2:21	rd:3	imm:70000	alu:21
+handle event cache memory read
+in the Cache 20
+Memory is responding
+insStr 10100100000000000000
+RW 20	rs1:0	rs2:34	rd:4	imm:70000	alu:34
+handle event cache memory read
+in the Cache 21
+Memory is responding
+insStr 11000000001111111111111111111000
+RW 21	rs1:70000	rs2:70000	rd:0	imm:-8	alu:70000
+handle event cache memory read
+in the Cache 22
+Memory is responding
+insStr 0
+RW 22	rs1:0	rs2:0	rd:0	imm:70000	alu:0
+handle event cache memory read
+in the Cache 13
+Memory is responding
+insStr 11011010000011000000000000000010
+RW 13	rs1:10	rs2:70000	rd:6	imm:2	alu:70000
+handle event cache memory read
+in the Cache 14
+Memory is responding
+insStr 11101000000000000000000000000000
+RW 14	rs1:70000	rs2:70000	rd:70000	imm:70000	alu:70000
+
+Register File Contents:
+
+PC	: 15
+
+x0	: 0
+x1	: 65535
+x2	: 65535
+x3	: 21
+x4	: 34
+x5	: 34
+x6	: 10
+x7	: 65525
+x8	: 10
+x9	: 0
+x10	: 0
+x11	: 0
+x12	: 0
+x13	: 0
+x14	: 0
+x15	: 0
+x16	: 0
+x17	: 0
+x18	: 0
+x19	: 0
+x20	: 0
+x21	: 0
+x22	: 0
+x23	: 0
+x24	: 0
+x25	: 0
+x26	: 0
+x27	: 0
+x28	: 0
+x29	: 0
+x30	: 0
+x31	: 0
+
+
+
+Main Memory Contents:
+
+0		: 10
+1		: 134610944
+2		: 134742017
+3		: 13127680
+4		: -1341390848
+5		: 135200767
+6		: 135266304
+7		: -1194459136
+8		: 432930817
+9		: 168820737
+10		: -1190264832
+11		: 432930817
+12		: 168820737
+13		: -636747774
+14		: -402653184
+15		: 13127680
+16		: -1186070528
+17		: 432930817
+18		: 168820737
+19		: 536576
+20		: 671744
+21		: -1069547528
+22		: 0
+23		: 0
+24		: 0
+25		: 0
+26		: 0
+27		: 0
+28		: 0
+29		: 0
+30		: 0
+
+
+Hash of the Processor State = -1518357572
