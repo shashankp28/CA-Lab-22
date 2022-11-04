@@ -26,4 +26,8 @@ public class MemoryWriteEvent extends Event {
 	public void setValue(int value) {
 		this.value = value;
 	}
+
+	public String toString() {
+		return "Memory write event, get address and set address";
+	}
 }

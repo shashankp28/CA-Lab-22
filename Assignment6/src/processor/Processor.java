@@ -1,6 +1,6 @@
 package processor;
+
 import processor.memorysystem.*;
-import processor.memorysystem.MainMemory;
 import processor.pipeline.EX_IF_LatchType;
 import processor.pipeline.EX_MA_LatchType;
 import processor.pipeline.Execute;
@@ -25,8 +25,6 @@ public class Processor {
 	EX_MA_LatchType EX_MA_Latch;
 	EX_IF_LatchType EX_IF_Latch;
 	MA_RW_LatchType MA_RW_Latch;
-
-	// Add caches
 	Cache instruction_cache;
 	Cache data_cache;
 	
@@ -39,28 +37,29 @@ public class Processor {
 	public Processor()
 	{
 		registerFile = new RegisterFile();
-		mainMemory = new MainMemory();
-		
+		mainMemory = new MainMemory();		
 		IF_EnableLatch = new IF_EnableLatchType();
 		IF_OF_Latch = new IF_OF_LatchType();
 		OF_EX_Latch = new OF_EX_LatchType();
 		EX_MA_Latch = new EX_MA_LatchType();
 		EX_IF_Latch = new EX_IF_LatchType();
 		MA_RW_Latch = new MA_RW_LatchType();
-		
-		instruction_cache = new Cache(this,8,1024);
-		data_cache = new Cache(this,8,1024);
+		// Adding caches
+		instruction_cache = new Cache(this,4,1024);
+		data_cache = new Cache(this,2,128);
+
+		// Instantiating each unit
 		IFUnit = new InstructionFetch(this, IF_EnableLatch, IF_OF_Latch, EX_IF_Latch, instruction_cache);
-		OFUnit = new OperandFetch(this, IF_OF_Latch, OF_EX_Latch, EX_MA_Latch, MA_RW_Latch, IF_EnableLatch);
-		EXUnit = new Execute(this, OF_EX_Latch, EX_MA_Latch, EX_IF_Latch, IF_OF_Latch, IF_EnableLatch);
-		MAUnit = new MemoryAccess(this, EX_MA_Latch, MA_RW_Latch, IF_EnableLatch, data_cache);
+		OFUnit = new OperandFetch(this, IF_OF_Latch, OF_EX_Latch,EX_MA_Latch,MA_RW_Latch,IF_EnableLatch);
+		EXUnit = new Execute(this, IF_OF_Latch, OF_EX_Latch, EX_MA_Latch, EX_IF_Latch, IF_EnableLatch);
+		MAUnit = new MemoryAccess(this, EX_MA_Latch, MA_RW_Latch, data_cache);
 		RWUnit = new RegisterWrite(this, MA_RW_Latch, IF_EnableLatch);
 	}
+	// Some methods
 	
 	public void printState(int memoryStartingAddress, int memoryEndingAddress)
 	{
 		System.out.println(registerFile.getContentsAsString());
-		
 		System.out.println(mainMemory.getContentsAsString(memoryStartingAddress, memoryEndingAddress));		
 	}
 
@@ -71,33 +70,25 @@ public class Processor {
 	public void setRegisterFile(RegisterFile registerFile) {
 		this.registerFile = registerFile;
 	}
-
 	public MainMemory getMainMemory() {
 		return mainMemory;
 	}
-
 	public void setMainMemory(MainMemory mainMemory) {
 		this.mainMemory = mainMemory;
 	}
-
 	public InstructionFetch getIFUnit() {
 		return IFUnit;
 	}
-
 	public OperandFetch getOFUnit() {
 		return OFUnit;
 	}
-
 	public Execute getEXUnit() {
 		return EXUnit;
 	}
-
 	public MemoryAccess getMAUnit() {
 		return MAUnit;
 	}
-
 	public RegisterWrite getRWUnit() {
 		return RWUnit;
 	}
-
 }

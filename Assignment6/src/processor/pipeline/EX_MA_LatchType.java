@@ -1,72 +1,35 @@
 package processor.pipeline;
 
-import generic.Instruction;
-
-public class EX_MA_LatchType {
-	
+public class EX_MA_LatchType {	
 	boolean MA_enable;
 	int alu_result;
-	Instruction instruction;
-	boolean nop;
-	boolean isBusy;
-	int pc_inst;
+	int rs1,rs2,rd,imm;
+	int rs1addr,rs2addr;
+	String opcode;
+	int pc_instruction;
+	boolean is_nop;
+	boolean is_busy;
 
-	public EX_MA_LatchType() {
+	// Constructor
+	public EX_MA_LatchType()
+	{
 		MA_enable = false;
-		pc_inst = -1;
+		opcode = "70000";
+		rs1 = 70000;
+		rs2 = 70000;
+		rd = 70000;
+		imm = 70000;
+		alu_result = 70000;
+		pc_instruction = -1;
+		is_nop = false;
+		rs1addr = 45;
+		rs2addr = 45;
+		is_busy = false;
 	}
-
-	public EX_MA_LatchType(boolean mA_enable) {
-		MA_enable = mA_enable;
-	}
-
-	public void setBusy(boolean busy){
-		isBusy = busy;
-	}
-
-	public boolean getBusy(){
-		return isBusy;
-	}
-
-	public EX_MA_LatchType(boolean mA_enable, int alu_result) {
-		MA_enable = mA_enable;
-		this.alu_result = alu_result;
-	}
-
-	public EX_MA_LatchType(boolean mA_enable, int alu_result, Instruction instruction) {
-		MA_enable = mA_enable;
-		this.alu_result = alu_result;
-		this.instruction = instruction;
-	}
-
 	public boolean isMA_enable() {
 		return MA_enable;
 	}
-
 	public void setMA_enable(boolean mA_enable) {
 		MA_enable = mA_enable;
 	}
-
-	public Instruction getInstruction() {
-		return instruction;
-	}
-
-	public void setInstruction(Instruction inst) {
-		instruction = inst;
-	}
-
-	public int getALU_result() {
-		return alu_result;
-	}
-
-	public void setALU_result(int result) {
-		alu_result = result;
-	}
-	public void setNop(boolean set_nop){
-		nop = set_nop;
-	}
-	public boolean getNop(){
-		return nop;
-	}
-
 }

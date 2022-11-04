@@ -90,7 +90,4 @@ public class Instruction {
 				{
 					return "PC="+ programCounter + "\t" + operationType + "\tnull" + "\tnull" + "\tnull" + "\n";
 				}
-			}
-		}
-	}
-}
+}}}}

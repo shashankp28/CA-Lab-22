@@ -1,12 +1,7 @@
 package processor.pipeline;
 
-import generic.Instruction;
 import generic.Simulator;
-import generic.Statistics;
-import generic.Instruction.OperationType;
-import generic.Operand;
 import processor.Processor;
-import generic.Statistics;
 
 public class RegisterWrite {
 	Processor containingProcessor;
@@ -22,44 +17,49 @@ public class RegisterWrite {
 	
 	public void performRW()
 	{
-		if (MA_RW_Latch.getNop()) {
-			MA_RW_Latch.setNop(false);
-			System.out.println("RW - MA_RW_Nop: False");
-//			IF_EnableLatch.setIF_enable(true);
-		} else if (MA_RW_Latch.isRW_enable())
+		if(MA_RW_Latch.isRW_enable())
 		{
+			// MA_RW_Latch.RW_enable = false;
+			if(MA_RW_Latch.is_nop == false) {
+				int alu_result = MA_RW_Latch.alu_result;
+				int rs1 = MA_RW_Latch.rs1;
+				int rs2 = MA_RW_Latch.rs2;
+				int rd = MA_RW_Latch.rd;
+				int imm = MA_RW_Latch.imm;
+				String opcode = MA_RW_Latch.opcode;
+				System.out.println("RW " + MA_RW_Latch.pc_instruction + "\trs1:" + rs1 + "\trs2:" + rs2 + "\trd:" + rd + "\timm:" + imm + "\talu:" + alu_result);
+				if(MA_RW_Latch.isLoad) {
+					containingProcessor.getRegisterFile().setValue(rd, alu_result);
+					MA_RW_Latch.isLoad = false;
+				}
+				else {
+					if(opcode.equals("11101") == false) {
+						if(opcode.equals("11000") == false) {
+							if(opcode.equals("11001") == false) {
+								if(opcode.equals("11010") == false) {
+									if(opcode.equals("11011") == false) {
+										if(opcode.equals("11100") == false) {
+											containingProcessor.getRegisterFile().setValue(rd, alu_result);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				
+				// if instruction being processed is an end instruction, remember to call Simulator.setSimulationComplete(true);
+				
+				
+				MA_RW_Latch.setRW_enable(false);
+				// IF_EnableLatch.setIF_enable(true);
+				if(MA_RW_Latch.opcode.equals("11101")) {
+					Simulator.setSimulationComplete(true);
+					IF_EnableLatch.setIF_enable(false);
+				}
+			}
 			//TODO
 			
-			// if instruction being processed is an end instruction, remember to call Simulator.setSimulationComplete(true);
-			Instruction inst = MA_RW_Latch.getInstruction();
-			String op_name = inst.getOperationType().name();
-			int operation_number = OperationType.valueOf(op_name).ordinal();
-
-			if(operation_number<=21)
-			{
-				int result = MA_RW_Latch.getALU_result();
-				containingProcessor.getRegisterFile().setValue(inst.getDestinationOperand().getValue(), result);
-				Statistics.setNumberOfRegisterWriteInstructions(Statistics.getNumberOfRegisterWriteInstructions()+1);
-			}
-
-			if(operation_number==22)
-			{
-				int result = MA_RW_Latch.getLoad_result();
-				containingProcessor.getRegisterFile().setValue(inst.getDestinationOperand().getValue(), result);
-				Statistics.setNumberOfRegisterWriteInstructions(Statistics.getNumberOfRegisterWriteInstructions()+1);
-			}
-			
-			if(operation_number==29)
-			{
-				Simulator.setSimulationComplete(true);
-				System.out.println("RW - Simulation COmplete: True");
-			}
-
-			if (operation_number != 29) {
-				IF_EnableLatch.setIF_enable(true);
-				System.out.println("RW - IF_Enable: True");
-
-			}
 		}
 	}
 

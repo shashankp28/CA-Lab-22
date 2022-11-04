@@ -1,67 +1,77 @@
 package generic;
 
 import java.io.PrintWriter;
+
 public class Statistics {
 	
 	// TODO add your statistics here
 	static int numberOfInstructions;
+	static int numberOfOFStageInstructions;
 	static int numberOfCycles;
-	static int numberOfOFStalls;
 	static int numberOfBranchTaken;
 	static int numberOfRegisterWriteInstructions;
+	static float IPC;
 	
-	public static void printStatistics(String statFile)
-	{
-		try
-		{
+
+	public static void printStatistics(String statFile)	{
+		try	{
+			// TODO add code here to print statistics in the output file
 			PrintWriter writer = new PrintWriter(statFile);
 			
-			writer.println("Number of instructions executed = " + numberOfInstructions);
-			writer.println("Number of cycles taken = " + numberOfCycles);
-			writer.println("Data Hazard OF Stalls = " + numberOfOFStalls);
-			writer.println("Number of Branch Taken = " + numberOfBranchTaken);
-			writer.println("Number of Register Write = " + numberOfRegisterWriteInstructions);
-			
-			// TODO add code here to print statistics in the output file
-
+			writer.println("Number of instructions executed: " + numberOfInstructions);
+			writer.println("Number of cycles taken: " + numberOfCycles);
+			writer.println("IPC: " + IPC);
 			
 			writer.close();
 		}
-		catch(Exception e)
-		{
+		catch(Exception e) {
 			Misc.printErrorAndExit(e.getMessage());
 		}
 	}
+	
+	// TODO write functions to update statistics
+	public static void setNumberOfInstructions(int numberOfInstructions) {
+		Statistics.numberOfInstructions = numberOfInstructions;
+	}
 
+	public static void setNumberOfCycles(int numberOfCycles) {
+		Statistics.numberOfCycles = numberOfCycles;
+	}
 
 	public static int getNumberOfInstructions() {
 		return numberOfInstructions;
 	}
-	public static void setNumberOfInstructions(int numberOfInstructions) {
-		Statistics.numberOfInstructions = numberOfInstructions;
-	}
+
 	public static int getNumberOfCycles() {
 		return numberOfCycles;
 	}
-	public static void setNumberOfCycles(int numberOfCycles) {
-		Statistics.numberOfCycles = numberOfCycles;
+	
+	public static void setNumberOfOFInstructions(int numberOfOFStageInstructions) {
+		Statistics.numberOfOFStageInstructions = numberOfOFStageInstructions;
 	}
-	public static int getNumberOfOFStalls() {
-		return numberOfOFStalls;
+	
+	public static int getNumberOfOFInstructions() {
+		return numberOfOFStageInstructions;
 	}
-	public static void setNumberOfOFStalls(int numberOfOFStalls) {
-		Statistics.numberOfOFStalls = numberOfOFStalls;
-	}
-	public static int getNumberOfBranchTaken() {
-		return numberOfBranchTaken;
-	}
+	
 	public static void setNumberOfBranchTaken(int numberOfBranchTaken) {
 		Statistics.numberOfBranchTaken = numberOfBranchTaken;
 	}
+	
+	public static int getNumberOfBranchTaken() {
+		return numberOfBranchTaken;
+	}
+	
+	public static void setnumberOfRegisterWriteInstructions(int numberOfRegisterWriteInstructions) {
+		Statistics.numberOfRegisterWriteInstructions = numberOfRegisterWriteInstructions;
+	}
+	
 	public static int getNumberOfRegisterWriteInstructions() {
 		return numberOfRegisterWriteInstructions;
 	}
-	public static void setNumberOfRegisterWriteInstructions(int numberOfRegisterWriteInstructions) {
-		Statistics.numberOfRegisterWriteInstructions = numberOfRegisterWriteInstructions;
+	
+	// Calculating the CPI
+	public static void setCPI() {
+		Statistics.IPC = (float)numberOfInstructions/(float)numberOfCycles;
 	}
 }

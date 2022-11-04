@@ -1,4 +1,6 @@
 package main;
+
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 import configuration.Configuration;
@@ -11,7 +13,7 @@ import generic.Simulator;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		if(args.length != 3)
 		{
 			Misc.printErrorAndExit("usage: java -jar <path-to-jar-file> <path-to-config-file> <path-to-stat-file> <path-to-object-file>\n");

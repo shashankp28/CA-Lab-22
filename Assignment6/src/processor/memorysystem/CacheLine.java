@@ -1,4 +1,5 @@
 package processor.memorysystem;
+
 import generic.*;
 import processor.*;
 
@@ -13,30 +14,32 @@ public class CacheLine{
         this.lru = 0;
     }
 
-    public CacheLine(int updated_lru) {
-        this.lru = updated_lru;
+    public CacheLine(int newLru) {
+        this.lru = newLru;
         this.tag[0] = -1;
         this.tag[1] = -1;
     }
 
-    public int get_cache_data(int index) {
+    public int getData(int index) {
         return this.data[index];
     }
 
-    public int get_cache_tag(int index) {
+    public int getTag(int index) {
         return this.tag[index];
     }
 
-    public int get_cache_lru() {
+    public int getLru() {
         return this.lru;
     }
 
-    public int set_cache_lru(int newLru) {
+    public int setLru(int newLru) {
         this.lru = newLru;
         return this.lru;
     }
 
-    public void set_cache_value(int tag, int value) {
+    public void setValue(int tag, int value) {
+
+        // Setting value
         if(tag == this.tag[0]) {
             this.data[0] = value;
             this.lru = 1;
